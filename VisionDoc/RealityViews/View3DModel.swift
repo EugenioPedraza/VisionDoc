@@ -11,20 +11,19 @@ import RealityKitContent
 
 
 struct View3DModel: View {
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    
     var body: some View {
-        Button("Show Solar System") {
-            Task {
-                let result = await openImmersiveSpace(id: "solarSystem")
-                if case .error = result {
-                    print("An error occurred")
-                }
+        RealityView{ content in
+            do {
+                let scene =  try await Entity.init(named: "heart", in: realityKitContentBundle)
+                scene.position = SIMD3<Float>(x:0 , y: -0.2, z:0)
+                content.add(scene)
+            } catch {
+                logger.error("\(error.localizedDescription)")
             }
         }
     }
 }
 
-#Preview(windowStyle: .automatic) {
+#Preview() {
     View3DModel()
 }

@@ -23,7 +23,7 @@ struct MenuView: View {
                                 .monospaced()
                                 .font(.system(size: 40, weight: .bold))
                             if area == MenuOptions.about {
-                                
+                                ModelButtonTest()
                             }
                             
                             if area == MenuOptions.learn {

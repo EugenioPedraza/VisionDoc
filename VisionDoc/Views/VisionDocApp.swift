@@ -14,13 +14,13 @@ public let logger = Logger()
 
 @main
 struct VisionDocApp: App {
-    @State private var style: ImmersionStyle = .mixed
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        ImmersiveSpace(id: "solarSystem") {
-            ImmersiveView()
-        }
+        WindowGroup(id: "volumetricWindow"){
+            View3DModel()
+        } .windowStyle(.volumetric)
+            .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
     }
 }

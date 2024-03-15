@@ -46,6 +46,7 @@ struct systemsMenu3D: View {
                                 .padding(25)
                                 .font(.system(size: 30))
                             Button(action: {
+                                self.showModel.toggle()
                                 openWindow(id: "volumetricWindow")
                             }) {
                                 Text("> Display Model")

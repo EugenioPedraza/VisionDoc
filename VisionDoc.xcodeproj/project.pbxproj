@@ -21,7 +21,6 @@
 		3942AB642BA37A4200203808 /* lungs.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3942AB4B2BA37A4100203808 /* lungs.usdz */; };
 		3942AB652BA37A4200203808 /* muscle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3942AB4C2BA37A4100203808 /* muscle.usdz */; };
 		3942AB662BA37A4200203808 /* nerve_cell.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3942AB4D2BA37A4100203808 /* nerve_cell.scn */; };
-		3942AB672BA37A4200203808 /* ObjModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942AB4F2BA37A4100203808 /* ObjModelView.swift */; };
 		3942AB682BA37A4200203808 /* BodySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942AB512BA37A4100203808 /* BodySystem.swift */; };
 		3942AB692BA37A4200203808 /* MenuOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942AB522BA37A4100203808 /* MenuOptions.swift */; };
 		3942AB6A2BA37A4200203808 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942AB532BA37A4100203808 /* ModelData.swift */; };
@@ -32,6 +31,7 @@
 		3942AB712BA37A4200203808 /* SceneKitModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942AB5C2BA37A4200203808 /* SceneKitModelView.swift */; };
 		3942AB722BA37A4200203808 /* systemsMenu3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942AB5D2BA37A4200203808 /* systemsMenu3D.swift */; };
 		3942AB742BA384AF00203808 /* View3DModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942AB732BA384AF00203808 /* View3DModel.swift */; };
+		3942ABA52BA3E55C00203808 /* ModelButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABA42BA3E55C00203808 /* ModelButtonTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 		3942AB4B2BA37A4100203808 /* lungs.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = lungs.usdz; sourceTree = "<group>"; };
 		3942AB4C2BA37A4100203808 /* muscle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = muscle.usdz; sourceTree = "<group>"; };
 		3942AB4D2BA37A4100203808 /* nerve_cell.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = nerve_cell.scn; sourceTree = "<group>"; };
-		3942AB4F2BA37A4100203808 /* ObjModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjModelView.swift; sourceTree = "<group>"; };
 		3942AB512BA37A4100203808 /* BodySystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodySystem.swift; sourceTree = "<group>"; };
 		3942AB522BA37A4100203808 /* MenuOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuOptions.swift; sourceTree = "<group>"; };
 		3942AB532BA37A4100203808 /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		3942AB5D2BA37A4200203808 /* systemsMenu3D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = systemsMenu3D.swift; sourceTree = "<group>"; };
 		3942AB732BA384AF00203808 /* View3DModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3DModel.swift; sourceTree = "<group>"; };
 		3942AB752BA393BD00203808 /* kidney.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = kidney.usdz; sourceTree = "<group>"; };
+		3942ABA42BA3E55C00203808 /* ModelButtonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelButtonTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +171,7 @@
 		3942AB502BA37A4100203808 /* RealityViews */ = {
 			isa = PBXGroup;
 			children = (
-				3942AB4F2BA37A4100203808 /* ObjModelView.swift */,
+				3942ABA42BA3E55C00203808 /* ModelButtonTest.swift */,
 				3942AB732BA384AF00203808 /* View3DModel.swift */,
 			);
 			path = RealityViews;
@@ -329,9 +329,9 @@
 				3942AB292BA379D400203808 /* VisionDocApp.swift in Sources */,
 				3942AB2D2BA379D400203808 /* ImmersiveView.swift in Sources */,
 				3942AB682BA37A4200203808 /* BodySystem.swift in Sources */,
-				3942AB672BA37A4200203808 /* ObjModelView.swift in Sources */,
 				3942AB692BA37A4200203808 /* MenuOptions.swift in Sources */,
 				3942AB6C2BA37A4200203808 /* BodyRow.swift in Sources */,
+				3942ABA52BA3E55C00203808 /* ModelButtonTest.swift in Sources */,
 				3942AB6A2BA37A4200203808 /* ModelData.swift in Sources */,
 				3942AB712BA37A4200203808 /* SceneKitModelView.swift in Sources */,
 			);
