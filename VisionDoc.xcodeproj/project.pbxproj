@@ -35,6 +35,13 @@
 		3942ABAB2BA3F2D300203808 /* RespiratoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABAA2BA3F2D300203808 /* RespiratoryModel.swift */; };
 		3942ABAD2BA3F30000203808 /* UrinaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABAC2BA3F30000203808 /* UrinaryModel.swift */; };
 		3942ABAF2BA3F34600203808 /* MuscularModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABAE2BA3F34600203808 /* MuscularModel.swift */; };
+		3942ABB12BA4BEA900203808 /* Quiz.json in Resources */ = {isa = PBXBuildFile; fileRef = 3942ABB02BA4BEA900203808 /* Quiz.json */; };
+		3942ABB92BA4BEBB00203808 /* difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB22BA4BEBB00203808 /* difficulty.swift */; };
+		3942ABBA2BA4BEBB00203808 /* DifficultyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB32BA4BEBB00203808 /* DifficultyButton.swift */; };
+		3942ABBB2BA4BEBB00203808 /* QuizData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB42BA4BEBB00203808 /* QuizData.swift */; };
+		3942ABBC2BA4BEBB00203808 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB52BA4BEBB00203808 /* QuizMenuView.swift */; };
+		3942ABBD2BA4BEBB00203808 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB62BA4BEBB00203808 /* QuizModel.swift */; };
+		3942ABBE2BA4BEBB00203808 /* quizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB72BA4BEBB00203808 /* quizView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +87,13 @@
 		3942ABAA2BA3F2D300203808 /* RespiratoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespiratoryModel.swift; sourceTree = "<group>"; };
 		3942ABAC2BA3F30000203808 /* UrinaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrinaryModel.swift; sourceTree = "<group>"; };
 		3942ABAE2BA3F34600203808 /* MuscularModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscularModel.swift; sourceTree = "<group>"; };
+		3942ABB02BA4BEA900203808 /* Quiz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quiz.json; sourceTree = "<group>"; };
+		3942ABB22BA4BEBB00203808 /* difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = difficulty.swift; sourceTree = "<group>"; };
+		3942ABB32BA4BEBB00203808 /* DifficultyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyButton.swift; sourceTree = "<group>"; };
+		3942ABB42BA4BEBB00203808 /* QuizData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizData.swift; sourceTree = "<group>"; };
+		3942ABB52BA4BEBB00203808 /* QuizMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
+		3942ABB62BA4BEBB00203808 /* QuizModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		3942ABB72BA4BEBB00203808 /* quizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quizView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +137,7 @@
 		3942AB232BA379D400203808 /* VisionDoc */ = {
 			isa = PBXGroup;
 			children = (
+				3942ABB82BA4BEBB00203808 /* Quiz */,
 				3942AB4E2BA37A4100203808 /* 3D Models */,
 				3942AB542BA37A4100203808 /* Models */,
 				3942AB502BA37A4100203808 /* RealityViews */,
@@ -190,9 +205,12 @@
 		3942AB542BA37A4100203808 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3942ABB22BA4BEBB00203808 /* difficulty.swift */,
+				3942ABB62BA4BEBB00203808 /* QuizModel.swift */,
 				3942AB512BA37A4100203808 /* BodySystem.swift */,
 				3942AB522BA37A4100203808 /* MenuOptions.swift */,
 				3942AB532BA37A4100203808 /* ModelData.swift */,
+				3942ABB42BA4BEBB00203808 /* QuizData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				3942AB552BA37A4200203808 /* bodySystemData.json */,
+				3942ABB02BA4BEA900203808 /* Quiz.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -208,6 +227,9 @@
 		3942AB5E2BA37A4200203808 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3942ABB32BA4BEBB00203808 /* DifficultyButton.swift */,
+				3942ABB52BA4BEBB00203808 /* QuizMenuView.swift */,
+				3942ABB72BA4BEBB00203808 /* quizView.swift */,
 				3942AB2C2BA379D400203808 /* ImmersiveView.swift */,
 				3942AB282BA379D400203808 /* VisionDocApp.swift */,
 				3942AB2A2BA379D400203808 /* ContentView.swift */,
@@ -217,6 +239,13 @@
 				3942AB5D2BA37A4200203808 /* systemsMenu3D.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3942ABB82BA4BEBB00203808 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Quiz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +338,7 @@
 				3942AB612BA37A4200203808 /* doctor.obj in Resources */,
 				3942AB322BA379D600203808 /* Preview Assets.xcassets in Resources */,
 				3942AB622BA37A4200203808 /* heart.usdz in Resources */,
+				3942ABB12BA4BEA900203808 /* Quiz.json in Resources */,
 				3942AB2F2BA379D600203808 /* Assets.xcassets in Resources */,
 				3942AB602BA37A4200203808 /* bone.scn in Resources */,
 				3942AB5F2BA37A4200203808 /* anatomyscene.usdz in Resources */,
@@ -331,20 +361,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				3942AB722BA37A4200203808 /* systemsMenu3D.swift in Sources */,
+				3942ABB92BA4BEBB00203808 /* difficulty.swift in Sources */,
+				3942ABBA2BA4BEBB00203808 /* DifficultyButton.swift in Sources */,
 				3942AB742BA384AF00203808 /* SkeletalModel.swift in Sources */,
 				3942AB2B2BA379D400203808 /* ContentView.swift in Sources */,
 				3942AB702BA37A4200203808 /* MenuView.swift in Sources */,
+				3942ABBC2BA4BEBB00203808 /* QuizMenuView.swift in Sources */,
 				3942AB292BA379D400203808 /* VisionDocApp.swift in Sources */,
 				3942ABAD2BA3F30000203808 /* UrinaryModel.swift in Sources */,
 				3942AB2D2BA379D400203808 /* ImmersiveView.swift in Sources */,
 				3942AB682BA37A4200203808 /* BodySystem.swift in Sources */,
 				3942ABA92BA3F29600203808 /* CirculatoryModel.swift in Sources */,
+				3942ABBB2BA4BEBB00203808 /* QuizData.swift in Sources */,
 				3942ABAB2BA3F2D300203808 /* RespiratoryModel.swift in Sources */,
 				3942AB692BA37A4200203808 /* MenuOptions.swift in Sources */,
+				3942ABBE2BA4BEBB00203808 /* quizView.swift in Sources */,
 				3942ABAF2BA3F34600203808 /* MuscularModel.swift in Sources */,
 				3942AB6C2BA37A4200203808 /* BodyRow.swift in Sources */,
 				3942ABA72BA3F11B00203808 /* NervousModel.swift in Sources */,
 				3942AB6A2BA37A4200203808 /* ModelData.swift in Sources */,
+				3942ABBD2BA4BEBB00203808 /* QuizModel.swift in Sources */,
 				3942AB712BA37A4200203808 /* SceneKitModelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

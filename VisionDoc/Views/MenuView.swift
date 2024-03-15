@@ -30,7 +30,7 @@ struct MenuView: View {
                                 
                             }
                             if area == MenuOptions.quiz {
-                                
+                                QuizMenuView(bodySystems: arrBodySystems[0])
                             }
                             
                             

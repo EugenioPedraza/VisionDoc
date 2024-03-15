@@ -22,7 +22,7 @@ enum MenuOptions : String, Identifiable, CaseIterable, Equatable
         case.learn:
             ""
         case.quiz:
-            "Test your learning using quiz module"
+            ""
         }
     }
 }
