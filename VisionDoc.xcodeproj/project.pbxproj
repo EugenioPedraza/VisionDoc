@@ -137,7 +137,6 @@
 		3942AB232BA379D400203808 /* VisionDoc */ = {
 			isa = PBXGroup;
 			children = (
-				3942ABB82BA4BEBB00203808 /* Quiz */,
 				3942AB4E2BA37A4100203808 /* 3D Models */,
 				3942AB542BA37A4100203808 /* Models */,
 				3942AB502BA37A4100203808 /* RealityViews */,
@@ -239,13 +238,6 @@
 				3942AB5D2BA37A4200203808 /* systemsMenu3D.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		3942ABB82BA4BEBB00203808 /* Quiz */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Quiz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,6 +538,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -572,6 +565,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};

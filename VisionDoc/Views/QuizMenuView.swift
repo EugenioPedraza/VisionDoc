@@ -25,7 +25,6 @@ struct QuizMenuView: View {
                                 self.selectedAnatomy = selectedSystem})
                         }
                     }
-
                 } detail: {
                     VStack(alignment: .leading){
                         if selectedAnatomy != nil {
@@ -43,7 +42,6 @@ struct QuizMenuView: View {
                 }
         }
     }
-    
 }
     
 

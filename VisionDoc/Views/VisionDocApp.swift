@@ -8,12 +8,16 @@
 import SwiftUI
 import os
 import ARKit
-
+import RealityKitContent
 
 public let logger = Logger()
 
 @main
 struct VisionDocApp: App {
+    init(){
+        RealityKitContent.GestureComponent
+            .registerComponent()
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()

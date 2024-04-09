@@ -13,8 +13,9 @@ struct UrinaryModel: View {
     var body: some View {
         RealityView{ content in
             do {
-                let scene =  try await Entity.init(named: "kidney", in: realityKitContentBundle)
-                scene.position = SIMD3<Float>(x:0 , y: -0.2, z:0)
+                let scene =  try await Entity.init(named: "kidneyAntomy.usda", in: realityKitContentBundle)
+                scene.position = SIMD3<Float>(x:0 , y:0, z:0)
+                scene.scale *= SIMD3<Float>(repeating:0.1)
                 content.add(scene)
             } catch {
                 logger.error("\(error.localizedDescription)")
