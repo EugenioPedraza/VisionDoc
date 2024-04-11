@@ -23,19 +23,7 @@ struct NervousModel: View {
                 logger.error("\(error.localizedDescription)")
             }
         }
-        .rotation3DEffect(.radians(rotateBy), axis: .y)
-        .gesture(
-            DragGesture(minimumDistance: 0.0)
-                .targetedToAnyEntity()
-                .onChanged{value in
-                    let location3D = value.convert(value.location3D, from: .local, to: .scene)
-                    let startLocation = value.convert(value.startLocation3D, from: .local, to: .scene)
-                    
-                    let delta = location3D - startLocation
-                    
-                    rotateBy = Double(atan(delta.x * 200))
-                }
-        )
+        .installGestures()
     }
 }
 

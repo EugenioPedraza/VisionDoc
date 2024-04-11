@@ -21,6 +21,7 @@ struct MuscularModel: View {
                 logger.error("\(error.localizedDescription)")
             }
         }
+        .installGestures()
     }
 }
 

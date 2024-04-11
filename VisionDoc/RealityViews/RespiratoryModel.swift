@@ -21,6 +21,7 @@ struct RespiratoryModel: View {
                 logger.error("\(error.localizedDescription)")
             }
         }
+        .installGestures()
     }
 }
 

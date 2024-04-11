@@ -7,9 +7,34 @@
 
 import SwiftUI
 
-struct AccountView: View {
+struct AccountViewz: View {
+    @State private var name = ""
+    @State private var classCode = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Form {
+                Section(header: Text("Sign In")) {
+                    TextField("Name", text: $name)
+                    TextField("Class Code", text: $classCode)
+                } .fontWeight(.bold)
+                
+                Button(action: {
+                }) {
+                    Text("Sign In")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+            }
+            .frame(width: 500) // Set a fixed width for the form
+            .padding(.horizontal) // Add horizontal padding
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .foregroundColor(.white)
+        .cornerRadius(20)
+        .glassBackgroundEffect()
     }
 }
 

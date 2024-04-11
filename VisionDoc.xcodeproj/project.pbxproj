@@ -42,6 +42,7 @@
 		3942ABBC2BA4BEBB00203808 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB52BA4BEBB00203808 /* QuizMenuView.swift */; };
 		3942ABBD2BA4BEBB00203808 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB62BA4BEBB00203808 /* QuizModel.swift */; };
 		3942ABBE2BA4BEBB00203808 /* quizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB72BA4BEBB00203808 /* quizView.swift */; };
+		39725C702BC85E9F00D62630 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39725C6F2BC85E9F00D62630 /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		3942ABB52BA4BEBB00203808 /* QuizMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
 		3942ABB62BA4BEBB00203808 /* QuizModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		3942ABB72BA4BEBB00203808 /* quizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quizView.swift; sourceTree = "<group>"; };
+		39725C6F2BC85E9F00D62630 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 				3942AB2A2BA379D400203808 /* ContentView.swift */,
 				3942AB572BA37A4200203808 /* BodyRow.swift */,
 				3942AB5B2BA37A4200203808 /* MenuView.swift */,
+				39725C6F2BC85E9F00D62630 /* AccountView.swift */,
 				3942AB5C2BA37A4200203808 /* SceneKitModelView.swift */,
 				3942AB5D2BA37A4200203808 /* systemsMenu3D.swift */,
 			);
@@ -360,6 +363,7 @@
 				3942AB702BA37A4200203808 /* MenuView.swift in Sources */,
 				3942ABBC2BA4BEBB00203808 /* QuizMenuView.swift in Sources */,
 				3942AB292BA379D400203808 /* VisionDocApp.swift in Sources */,
+				39725C702BC85E9F00D62630 /* AccountView.swift in Sources */,
 				3942ABAD2BA3F30000203808 /* UrinaryModel.swift in Sources */,
 				3942AB2D2BA379D400203808 /* ImmersiveView.swift in Sources */,
 				3942AB682BA37A4200203808 /* BodySystem.swift in Sources */,

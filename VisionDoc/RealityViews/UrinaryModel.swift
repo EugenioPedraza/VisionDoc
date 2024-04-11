@@ -21,6 +21,7 @@ struct UrinaryModel: View {
                 logger.error("\(error.localizedDescription)")
             }
         }
+        .installGestures()
     }
 }
 
