@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct DifficultyButton: View {
-    let difficulty: Difficulty
-    
+    var difficulty: Difficulty
+    var action: () -> Void  // Closure to execute on tap
+
     var body: some View {
-        Text(difficulty.rawValue)
-            .font(.title)
-            .foregroundColor(.white)
-            .padding()
-            .cornerRadius(10)
+        Button(action: action) {
+            Text(difficulty.rawValue)
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+        }
     }
 }
+
 

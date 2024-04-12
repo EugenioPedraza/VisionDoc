@@ -66,7 +66,7 @@ struct QuizView: View {
                 .fontWeight(.bold)
                 .padding(.leading, 20)
                 .padding(.top)
-            QuizMenuView(bodySystems: arrBodySystems[0])
+            QuizMenuView()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundColor(.white)

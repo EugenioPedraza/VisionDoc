@@ -3,48 +3,31 @@ import RealityKit
 
 
 struct QuizMenuView: View {
-    
-    var bodySystems: BodySystem
-    @State private var selectedAnatomy: BodySystem?
-    @State private var bounce = false
-    @State private var rotationAngle: CGFloat = 0
-    @State var showModel: Bool = false
-    
-    var body: some View {
-        
-        Text("Test your knowledge")
-            .font(.system(size: 50))
-            .fontWeight(.bold)
+    @State private var selectedAnatomy: BodySystem? = nil
+    @State private var bodySystems: [BodySystem] = []
 
-        Divider()
-            HStack{
-                NavigationSplitView{
-                    ScrollView{
-                        ForEach(arrBodySystems) {bodySystem in
-                            BodyRow(bodySystem: bodySystem, onSelect: {selectedSystem in
-                                self.selectedAnatomy = selectedSystem})
-                        }
+    var body: some View {
+            ScrollView {
+                // Display the grid view
+                BodySystemGridView(bodySystems: bodySystems, selectedAnatomy: $selectedAnatomy)
+                    .onAppear {
+                        loadBodySystems()
                     }
-                } detail: {
-                    VStack(alignment: .leading){
-                        if selectedAnatomy != nil {
-                            quizView(difficulty: .easy, selectedAnatomy: selectedAnatomy)
-                            
-                        } else {
-                            Text("Choose an Anatomy System to take quiz")
-                                .font(.system(size: 30))
-                                .fontWeight(.light)
-                                .padding(15)
-                                .frame(maxWidth: .infinity, maxHeight: 50)
-                                .multilineTextAlignment(.center)
-                        }
-                    }
-                }
+            }
+    }
+
+    private func loadBodySystems() {
+        // Assuming this function fetches data from your API
+        let url = URL(string: "http://localhost:3000/systems")!
+        NetworkManager.shared.fetchData(url: url) { (result: Result<[BodySystem], Error>) in
+            switch result {
+            case .success(let systems):
+                self.bodySystems = systems
+            case .failure(let error):
+                print("Failed to fetch systems: \(error)")
+            }
         }
     }
 }
-    
 
-#Preview {
-        QuizMenuView(bodySystems: arrBodySystems[1])
-}
+
