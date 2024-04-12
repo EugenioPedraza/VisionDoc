@@ -7,8 +7,9 @@
 
 import Foundation
 
-enum Difficulty: String {
+enum Difficulty: String, CaseIterable {
     case easy = "Easy"
     case normal = "Normal"
     case advanced = "Advanced"
 }
+

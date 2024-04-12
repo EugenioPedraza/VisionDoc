@@ -19,10 +19,6 @@ struct systemsMenu3D: View {
     @Environment(\.openWindow) var openWindow
     
     var body: some View {
-        
-        Text("Body Systems")
-            .font(.system(size: 70))
-            .fontWeight(.bold)
 
         Divider()
             HStack{

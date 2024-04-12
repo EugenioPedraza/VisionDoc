@@ -12,6 +12,15 @@ def Xform "Root"
         bindMaterialAs = "weakerThanDescendants"
     )
 
+    def "GridMaterial" (
+        active = true
+        prepend references = @Materials/GridMaterial.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
     def Sphere "Sphere" (
         active = true
         prepend apiSchemas = ["MaterialBindingAPI"]
@@ -45,15 +54,13 @@ def Xform "Root"
         {
             uniform token info:id = "RealityKit.InputTarget"
         }
-    }
 
-    def "GridMaterial" (
-        active = true
-        prepend references = @Materials/GridMaterial.usda@
-    )
-    {
-        float3 xformOp:scale = (1, 1, 1)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        def RealityKitCustomComponent "RealityKitContent_GestureComponent"
+        {
+            uniform token info:id = "RealityKitContent.GestureComponent"
+            bool pivotOnDrag = 1
+            bool preserveOrientationOnPivotDrag = 1
+        }
     }
 }
 

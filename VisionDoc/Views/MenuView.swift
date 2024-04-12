@@ -1,58 +1,85 @@
-//
-//  MenuView.swift
-//  desarrolloVision
-//
-//  Created by D Cantu on 01/03/24.
-//
-
 import SwiftUI
-
 
 struct MenuView: View {
     var body: some View {
-        VStack{
-                Text("Welcome to VisionDoc")
-                    .monospaced()
-                    .font(.system(size: 40, weight: .bold))
-                    .padding(.top, 250)
-                
-                HStack(spacing: 25){
-                    ForEach(MenuOptions.allCases) { area in
-                        NavigationLink {
-                            Text(area.title)
-                                .monospaced()
-                                .font(.system(size: 40, weight: .bold))
-                            if area == MenuOptions.about {
-                            }
-                            
-                            if area == MenuOptions.learn {
-                                systemsMenu3D(bodySystems: arrBodySystems[0])
-                                
-                            }
-                            if area == MenuOptions.quiz {
-                                QuizMenuView(bodySystems: arrBodySystems[0])
-                            }
-                            
-                            
-                        } label: {
-                            Label(area.name, systemImage: "chevron.right")
-                                .monospaced()
-                                .font(.title)
-                        }
-                        .controlSize(.extraLarge)
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
                 }
-            }
+            LearnView()
+                .tabItem {
+                    Label("Learn", systemImage: "book")
+                }
+            QuizView()
+                .tabItem {
+                    Label("Quiz", systemImage: "questionmark.circle")
+                }
+            AccountView()
+                .tabItem {
+                    Label("Account", systemImage: "person")
+                }
         }
-            .background()
-            {
-                SceneKitModelView(modelName: "doctor.obj", rotationAngle: 0)
-            }
     }
 }
+
+struct HomeView: View {
+    var body: some View {
+        VStack {
+            
+            Text("VisionDoc")
+                .font(.custom("SF Pro", size: 130))
+                .fontWeight(.heavy)
+                .padding(.bottom, 500)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .foregroundColor(.white)
+        .cornerRadius(20)
+        .background {
+            Image("menuimage")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                .cornerRadius(50) // Apply corner radius
+                .clipped() // Clip the image to the rounded corners
+        }
+    }
+}
+
+struct LearnView: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Body Systems")
+                .font(.custom("monospace", size: 60))
+                .fontWeight(.bold)
+                .padding(.leading, 20)
+                .padding(.top)
+            systemsMenu3D(bodySystems: arrBodySystems[0])
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .foregroundColor(.white)
+        .cornerRadius(20)
+    }
+}
+
+struct QuizView: View {
+    var body: some View {
+        VStack {
+            Text("Quiz")
+                .font(.custom("monospace", size: 60))
+                .fontWeight(.bold)
+                .padding(.leading, 20)
+                .padding(.top)
+            QuizMenuView()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .foregroundColor(.white)
+        .cornerRadius(20)
+    }
+}
+
+
 
 #Preview {
     MenuView()
 }
-
-
-
