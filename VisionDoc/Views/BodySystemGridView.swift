@@ -25,6 +25,7 @@ struct BodySystemGridView: View {
                                 .background(Color.clear)
                                 .clipShape(RoundedRectangle(cornerRadius: 12))
                                 .padding(.bottom, 8)  // Optional padding between the model and the name
+                                .glassBackgroundEffect()
 
                             Text(system.name)
                                 .font(.largeTitle) // Use a suitable font size
