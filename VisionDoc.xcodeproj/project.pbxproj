@@ -318,6 +318,9 @@
 				Base,
 			);
 			mainGroup = 3942AB182BA379D400203808;
+			packageReferences = (
+				5BBB69BD2BC9ACF800C46B91 /* XCRemoteSwiftPackageReference "RealityUI" */,
+			);
 			productRefGroup = 3942AB222BA379D400203808 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -654,6 +657,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5BBB69BD2BC9ACF800C46B91 /* XCRemoteSwiftPackageReference "RealityUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/RealityUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		3942AB262BA379D400203808 /* RealityKitContent */ = {
