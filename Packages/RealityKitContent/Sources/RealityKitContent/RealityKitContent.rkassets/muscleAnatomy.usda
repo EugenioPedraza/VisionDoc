@@ -29,7 +29,9 @@ def Xform "Root"
             uniform token info:id = "RealityKit.InputTarget"
         }
 
-        def RealityKitComponent "Collider"
+        def RealityKitComponent "Collider" (
+            active = false
+        )
         {
             uint group = 1
             uniform token info:id = "RealityKit.Collider"
@@ -48,6 +50,12 @@ def Xform "Root"
                     float3 position = (-0.39118195, -39.84947, -2.1542826)
                 }
             }
+        }
+
+        def RealityKitCustomComponent "RealityKitContent_PointOfInterestComponent"
+        {
+            string description = "Description test"
+            uniform token info:id = "RealityKitContent.PointOfInterestComponent"
         }
     }
 }
