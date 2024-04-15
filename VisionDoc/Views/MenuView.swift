@@ -25,23 +25,32 @@ struct MenuView: View {
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            
-            Text("VisionDoc")
-                .font(.custom("SF Pro", size: 130))
-                .fontWeight(.heavy)
-                .padding(.bottom, 500)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .foregroundColor(.white)
-        .cornerRadius(20)
-        .background {
+        ZStack {
+            // Background
             Image("menuimage")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
-                .cornerRadius(50) // Apply corner radius
-                .clipped() // Clip the image to the rounded corners
+                .blur(radius: 10)
+
+            // Content
+            VStack {
+                Spacer()
+                
+                Text("VisionDoc")
+                    .font(.system(size: 130))
+                    .fontWeight(.heavy)
+                    .foregroundColor(.white)
+                    .shadow(radius: 10) // Add shadow for better readability
+                
+                Text("Explore Anatomy Like Never Before")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+
+                Spacer()
+
+            }
         }
     }
 }
