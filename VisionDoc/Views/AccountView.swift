@@ -8,7 +8,7 @@ struct AccountView: View {
     @State private var errorMessage = ""
     @State private var isSuccess = false
     @State private var message = ""
-
+    
     var body: some View {
         VStack (spacing: 10) {
             VStack(spacing: 20) {
@@ -26,16 +26,16 @@ struct AccountView: View {
                     .cornerRadius(8)
                     .shadow(radius: 3)
                     .frame(maxWidth: 300, maxHeight: 50)
-
+                
                 TextField("Student ID", text: $studentID)
                     .font(.system(size: 28))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    
+                
                     .background(Color(UIColor.systemBackground))
                     .cornerRadius(8)
                     .shadow(radius: 3)
                     .frame(maxWidth: 300, maxHeight: 50)
-
+                
                 SecureField("Password", text: $password)
                     .font(.system(size: 28))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -43,7 +43,7 @@ struct AccountView: View {
                     .cornerRadius(8)
                     .shadow(radius: 3)
                     .frame(maxWidth: 300, maxHeight: 50)
-
+                
                 if !errorMessage.isEmpty {
                     Text(errorMessage)
                         .foregroundColor(.red)
@@ -102,15 +102,35 @@ struct AccountView: View {
                     self.errorMessage = error?.localizedDescription ?? "Unknown error"
                     return
                 }
+
                 if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                    
-                    // Asegurarme de poner bien que hace despues
-                    print("Login Bien")
+                    do {
+                        let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                        if let user = jsonResponse?["user"] as? [String: Any] {
+                            print("User logged in:", user)
+                            
+                            UserDefaults.standard.set(user["id"] as? Int, forKey: "userID")
+                                        UserDefaults.standard.set(user["name"] as? String, forKey: "userName")
+                                        UserDefaults.standard.set(user["studentID"] as? String, forKey: "userStudentID")
+                            
+                            // Do something with user data, e.g., navigate to another view
+                        }
+                        print("Response JSON:", jsonResponse ?? "No JSON data")
+                    } catch {
+                        self.errorMessage = "JSON parsing error: \(error)"
+                    }
                 } else {
-                    self.errorMessage = "Invalid credentials or server error"
+                    // Decode the JSON to get the error message
+                    do {
+                        let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                        self.errorMessage = jsonResponse?["error"] as? String ?? "Unknown error"
+                    } catch {
+                        self.errorMessage = "Failed to parse error message."
+                    }
                 }
             }
         }.resume()
+
     }
 }
 
