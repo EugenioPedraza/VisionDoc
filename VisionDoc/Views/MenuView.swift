@@ -19,6 +19,10 @@ struct MenuView: View {
                 .tabItem {
                     Label("Account", systemImage: "person")
                 }
+            UserProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle.fill")
+                }
         }
     }
 }

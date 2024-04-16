@@ -46,6 +46,7 @@
 		5B5DEBF92BC89F0300F1251A /* BodySystemGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DEBF82BC89F0300F1251A /* BodySystemGridView.swift */; };
 		5B5DEBFB2BC8B4EE00F1251A /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DEBFA2BC8B4EE00F1251A /* QuestionView.swift */; };
 		5B5E37C22BCED45300E88278 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E37C12BCED45300E88278 /* UserProfileView.swift */; };
+		5B5E37C42BCEFA6700E88278 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E37C32BCEFA6700E88278 /* UserProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		5B5DEBF82BC89F0300F1251A /* BodySystemGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodySystemGridView.swift; sourceTree = "<group>"; };
 		5B5DEBFA2BC8B4EE00F1251A /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		5B5E37C12BCED45300E88278 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		5B5E37C32BCEFA6700E88278 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 				3942AB5B2BA37A4200203808 /* MenuView.swift */,
 				39725C6F2BC85E9F00D62630 /* AccountView.swift */,
 				5B5E37C12BCED45300E88278 /* UserProfileView.swift */,
+				5B5E37C32BCEFA6700E88278 /* UserProfileViewModel.swift */,
 				3942AB5C2BA37A4200203808 /* SceneKitModelView.swift */,
 				3942AB5D2BA37A4200203808 /* systemsMenu3D.swift */,
 			);
@@ -375,6 +378,7 @@
 				5B5E37C22BCED45300E88278 /* UserProfileView.swift in Sources */,
 				3942AB2B2BA379D400203808 /* ContentView.swift in Sources */,
 				3942AB702BA37A4200203808 /* MenuView.swift in Sources */,
+				5B5E37C42BCEFA6700E88278 /* UserProfileViewModel.swift in Sources */,
 				3942ABBC2BA4BEBB00203808 /* QuizMenuView.swift in Sources */,
 				3942AB292BA379D400203808 /* VisionDocApp.swift in Sources */,
 				39725C702BC85E9F00D62630 /* AccountView.swift in Sources */,

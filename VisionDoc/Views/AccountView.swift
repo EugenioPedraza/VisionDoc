@@ -8,17 +8,17 @@ struct AccountView: View {
     @State private var errorMessage = ""
     @State private var isSuccess = false
     @State private var message = ""
-    
+
     var body: some View {
-        VStack (spacing: 10) {
+        VStack(spacing: 10) {
             VStack(spacing: 20) {
                 Image(systemName: "person.circle")
                     .font(.system(size: 60))
-                
+
                 Text("Log in")
                     .font(.extraLargeTitle)
                     .bold()
-                
+
                 TextField("Name", text: $name)
                     .font(.system(size: 28))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -26,53 +26,30 @@ struct AccountView: View {
                     .cornerRadius(8)
                     .shadow(radius: 3)
                     .frame(maxWidth: 300, maxHeight: 50)
-                
+
                 TextField("Student ID", text: $studentID)
-                    .font(.system(size: 28))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                
                     .background(Color(UIColor.systemBackground))
                     .cornerRadius(8)
                     .shadow(radius: 3)
                     .frame(maxWidth: 300, maxHeight: 50)
-                
+
                 SecureField("Password", text: $password)
-                    .font(.system(size: 28))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .background(Color(UIColor.systemBackground))
                     .cornerRadius(8)
                     .shadow(radius: 3)
                     .frame(maxWidth: 300, maxHeight: 50)
-                
+
                 if !errorMessage.isEmpty {
                     Text(errorMessage)
                         .foregroundColor(.red)
-                        .font(.caption)
                 }
-                
+
                 if isLoading {
                     ProgressView()
                 } else {
-                    HStack {
-                        Button("Sign in", action: loginUser)
-                            .font(.system(size: 20))
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: 200)
-                            .cornerRadius(10)
-                        
-                        Button("Register") {
-                            registerUser(name: name, studentID: studentID, password: password) { success, responseMessage in
-                                self.isSuccess = success
-                                self.message = responseMessage
-                            }
-                        }
-                        .font(.system(size: 20))
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: 200)
-                        .cornerRadius(10)
-                    }
+                    loginButtons
                 }
             }
             .padding()
@@ -83,6 +60,36 @@ struct AccountView: View {
         .edgesIgnoringSafeArea(.all)
         .padding()
     }
+
+    var loginButtons: some View {
+        HStack {
+            Button("Sign in", action: loginUser)
+                .buttonStyle(FilledButtonStyle())
+
+            Button("Register") {
+                registerUser(name: name, studentID: studentID, password: password) { success, responseMessage in
+                    self.isSuccess = success
+                    self.message = responseMessage
+                }
+            }
+            .buttonStyle(FilledButtonStyle())
+
+            if UserDefaults.standard.integer(forKey: "userId") != 0 {
+                Button("Logout", action: logout)
+                    .buttonStyle(FilledButtonStyle())
+            }
+        }
+    }
+    
+    func logout() {
+            UserDefaults.standard.removeObject(forKey: "userId")
+            UserDefaults.standard.removeObject(forKey: "userName")
+            UserDefaults.standard.removeObject(forKey: "userStudentID")
+
+            // Optionally reset local state or navigate to login screen
+            isSuccess = false
+            message = "Logged out successfully."
+        }
     
     func loginUser() {
         isLoading = true
@@ -111,7 +118,7 @@ struct AccountView: View {
                         UserDefaults.standard.set(loginResponse.user.studentID, forKey: "userStudentID")
                         
                         print("User logged in:", loginResponse.user)
-                        // Navigate or update UI as needed
+                        
                     } catch {
                         self.errorMessage = "JSON parsing error: \(error)"
                     }
@@ -176,5 +183,17 @@ struct User: Codable {
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
         AccountView()
+    }
+}
+
+struct FilledButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.system(size: 20))
+            .foregroundColor(.white)
+            .padding()
+            .frame(maxWidth: 200)
+            .cornerRadius(10)
+            .scaleEffect(configuration.isPressed ? 0.95 : 1)
     }
 }
