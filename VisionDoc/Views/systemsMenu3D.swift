@@ -28,6 +28,7 @@ struct systemsMenu3D: View {
                             BodyRow(bodySystem: bodySystem, onSelect: {selectedSystem in
                                 self.selectedAnatomy = selectedSystem})
                         }
+                        .navigationTitle("Systems")
                     }
 
                 } detail: {
@@ -75,6 +76,7 @@ struct systemsMenu3D: View {
                         }
                     }
                     .padding()
+                    .navigationTitle("Information")
                 }
         }
         

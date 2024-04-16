@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct MenuView: View {
+    @State var rotationAngle = 0
     var body: some View {
         TabView {
             HomeView()
@@ -29,8 +30,11 @@ struct HomeView: View {
             
             Text("VisionDoc")
                 .font(.custom("SF Pro", size: 130))
-                .fontWeight(.heavy)
-                .padding(.bottom, 500)
+                .fontWeight(.bold)
+            Text("Medicine in your hands")
+                .padding(.bottom, 400)
+                .font(.custom("SF Pro", size: 35))
+            // SceneKitModelView(modelName: "heart.usdz", rotationAngle: 0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundColor(.white)

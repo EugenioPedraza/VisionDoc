@@ -22,7 +22,7 @@ struct BodySystemGridView: View {
                         VStack {
                             SceneView(scene: loadModel(named: system.modelName), options: [.autoenablesDefaultLighting, .allowsCameraControl])
                                 .frame(width: 300, height: 300)
-                                .background(Color.clear)
+                                .glassBackgroundEffect()
                                 .clipShape(RoundedRectangle(cornerRadius: 12))
                                 .padding(.bottom, 8)  // Optional padding between the model and the name
 
