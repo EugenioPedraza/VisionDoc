@@ -102,35 +102,24 @@ struct AccountView: View {
                     self.errorMessage = error?.localizedDescription ?? "Unknown error"
                     return
                 }
-
+                
                 if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                     do {
-                        let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                        if let user = jsonResponse?["user"] as? [String: Any] {
-                            print("User logged in:", user)
-                            
-                            UserDefaults.standard.set(user["id"] as? Int, forKey: "userID")
-                                        UserDefaults.standard.set(user["name"] as? String, forKey: "userName")
-                                        UserDefaults.standard.set(user["studentID"] as? String, forKey: "userStudentID")
-                            
-                            // Do something with user data, e.g., navigate to another view
-                        }
-                        print("Response JSON:", jsonResponse ?? "No JSON data")
+                        let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
+                        UserDefaults.standard.set(loginResponse.user.id, forKey: "userId")
+                        UserDefaults.standard.set(loginResponse.user.name, forKey: "userName")
+                        UserDefaults.standard.set(loginResponse.user.studentID, forKey: "userStudentID")
+                        
+                        print("User logged in:", loginResponse.user)
+                        // Navigate or update UI as needed
                     } catch {
                         self.errorMessage = "JSON parsing error: \(error)"
                     }
                 } else {
-                    // Decode the JSON to get the error message
-                    do {
-                        let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                        self.errorMessage = jsonResponse?["error"] as? String ?? "Unknown error"
-                    } catch {
-                        self.errorMessage = "Failed to parse error message."
-                    }
+                    self.errorMessage = "Invalid credentials or server error"
                 }
             }
         }.resume()
-
     }
 }
 
@@ -172,6 +161,16 @@ func registerUser(name: String, studentID: String, password: String, completion:
     }.resume()
 }
 
+struct LoginResponse: Codable {
+    let message: String
+    let user: User
+}
+
+struct User: Codable {
+    let id: Int
+    let name: String
+    let studentID: String
+}
 
 
 struct AccountView_Previews: PreviewProvider {

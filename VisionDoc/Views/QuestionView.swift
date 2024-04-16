@@ -160,16 +160,36 @@ struct QuestionView: View {
                     // Update the UI to show an error message
                     return
                 }
-                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                    print("Results saved successfully")
-                    // Update the UI to show a success message
-                } else {
-                    print("Failed to save results, received HTTP \(String(describing: response))")
-                    // Update the UI to show an error message
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    print("No valid HTTP URL response received.")
+                    return
+                }
+                switch httpResponse.statusCode {
+                case 200:
+                    // Assuming server returns JSON data
+                    if let jsonData = data, let json = try? JSONSerialization.jsonObject(with: jsonData) as? [String: Any] {
+                        print("Results saved successfully: \(json)")
+                        // Update the UI to show a success message
+                    } else {
+                        print("Results saved but no JSON message received.")
+                    }
+                case 400...499:
+                    print("Client error: \(httpResponse.statusCode)")
+                    if let jsonData = data, let json = try? JSONSerialization.jsonObject(with: jsonData) as? [String: Any], let message = json["message"] as? String {
+                        print("Error message from server: \(message)")
+                        // Update the UI to show this error message
+                    }
+                case 500...599:
+                    print("Server error: \(httpResponse.statusCode)")
+                    // Update the UI to show a server error message
+                default:
+                    print("Received unexpected HTTP status code: \(httpResponse.statusCode)")
+                    // Handle unexpected status codes
                 }
             }
         }.resume()
     }
+
 
     
     private func loadQuizQuestions() {
