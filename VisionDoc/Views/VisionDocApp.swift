@@ -14,9 +14,24 @@ public let logger = Logger()
 
 @main
 struct VisionDocApp: App {
+    
+    private let immersiveSpaceIdentifier = "Immersive"
+    @State private var viewModel = ViewModel()
+    
+    
     init(){
-        RealityKitContent.GestureComponent
-            .registerComponent()
+        
+    
+        
+        
+        RealityKitContent.PointOfInterestComponent.registerComponent()
+        PointOfInterestRuntimeComponent.registerComponent()
+        RealityKitContent.BillboardComponent.registerComponent()
+        RealityKitContent.GestureComponent.registerComponent()
+        PointOfInterestRuntimeComponent.registerComponent()
+        
+        
+        
     }
     var body: some Scene {
         WindowGroup {
@@ -27,6 +42,7 @@ struct VisionDocApp: App {
         } .windowStyle(.volumetric)
             .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
         
+        
         WindowGroup(id: "nervousModel"){
             NervousModel()
         } .windowStyle(.volumetric)
@@ -34,7 +50,7 @@ struct VisionDocApp: App {
         WindowGroup(id: "muscularModel"){
             MuscularModel()
         } .windowStyle(.volumetric)
-            .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
+            .defaultSize(width: 7, height: 7, depth: 7, in: .meters)
         
         WindowGroup(id: "circulatoryModel"){
             CirculatoryModel()
@@ -49,5 +65,19 @@ struct VisionDocApp: App {
             UrinaryModel()
         } .windowStyle(.volumetric)
             .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
+        
+        
+        WindowGroup {
+            SecondView(spaceId: immersiveSpaceIdentifier,
+                        viewModel: viewModel)
+        }
+        .windowStyle(.plain)
+
+        ImmersiveSpace(id: immersiveSpaceIdentifier) {
+            SkeletonModelView(viewModel: viewModel)
+        }
+
     }
 }
+        
+    

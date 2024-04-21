@@ -47,6 +47,13 @@
 		5B5DEBFB2BC8B4EE00F1251A /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DEBFA2BC8B4EE00F1251A /* QuestionView.swift */; };
 		5B5E37C22BCED45300E88278 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E37C12BCED45300E88278 /* UserProfileView.swift */; };
 		5B5E37C42BCEFA6700E88278 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E37C32BCEFA6700E88278 /* UserProfileViewModel.swift */; };
+		DC8359032BD45C7D00C2B320 /* LearnMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8359022BD45C7C00C2B320 /* LearnMoreView.swift */; };
+		DC8359052BD45CC300C2B320 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8359042BD45CC300C2B320 /* ViewModel.swift */; };
+		DC8359082BD45D6B00C2B320 /* AttachmentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8359072BD45D6B00C2B320 /* AttachmentProvider.swift */; };
+		DC83590A2BD45D9F00C2B320 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8359092BD45D9F00C2B320 /* Components.swift */; };
+		DC83590C2BD46BD900C2B320 /* SkeletonModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC83590B2BD46BD900C2B320 /* SkeletonModelView.swift */; };
+		DC83590E2BD4CD5000C2B320 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC83590D2BD4CD5000C2B320 /* SecondView.swift */; };
+		DC89C4372BD2F51C00EF9853 /* skeleton.usdz in Resources */ = {isa = PBXBuildFile; fileRef = DC89C4362BD2F51C00EF9853 /* skeleton.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +111,13 @@
 		5B5DEBFA2BC8B4EE00F1251A /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		5B5E37C12BCED45300E88278 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		5B5E37C32BCEFA6700E88278 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		DC8359022BD45C7C00C2B320 /* LearnMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnMoreView.swift; sourceTree = "<group>"; };
+		DC8359042BD45CC300C2B320 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DC8359072BD45D6B00C2B320 /* AttachmentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentProvider.swift; sourceTree = "<group>"; };
+		DC8359092BD45D9F00C2B320 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		DC83590B2BD46BD900C2B320 /* SkeletonModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonModelView.swift; sourceTree = "<group>"; };
+		DC83590D2BD4CD5000C2B320 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		DC89C4362BD2F51C00EF9853 /* skeleton.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = skeleton.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +161,7 @@
 		3942AB232BA379D400203808 /* VisionDoc */ = {
 			isa = PBXGroup;
 			children = (
+				DC8359062BD45D0800C2B320 /* TestView */,
 				3942AB4E2BA37A4100203808 /* 3D Models */,
 				3942AB542BA37A4100203808 /* Models */,
 				3942AB502BA37A4100203808 /* RealityViews */,
@@ -186,6 +201,7 @@
 		3942AB4E2BA37A4100203808 /* 3D Models */ = {
 			isa = PBXGroup;
 			children = (
+				DC89C4362BD2F51C00EF9853 /* skeleton.usdz */,
 				3942AB462BA37A4100203808 /* anatomyscene.usdz */,
 				3942AB472BA37A4100203808 /* bone.scn */,
 				3942AB482BA37A4100203808 /* doctor.obj */,
@@ -253,6 +269,19 @@
 				3942AB5D2BA37A4200203808 /* systemsMenu3D.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DC8359062BD45D0800C2B320 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				DC8359042BD45CC300C2B320 /* ViewModel.swift */,
+				DC8359022BD45C7C00C2B320 /* LearnMoreView.swift */,
+				DC8359072BD45D6B00C2B320 /* AttachmentProvider.swift */,
+				DC8359092BD45D9F00C2B320 /* Components.swift */,
+				DC83590B2BD46BD900C2B320 /* SkeletonModelView.swift */,
+				DC83590D2BD4CD5000C2B320 /* SecondView.swift */,
+			);
+			path = TestView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +373,7 @@
 			files = (
 				3942AB652BA37A4200203808 /* muscle.usdz in Resources */,
 				3942AB662BA37A4200203808 /* nerve_cell.scn in Resources */,
+				DC89C4372BD2F51C00EF9853 /* skeleton.usdz in Resources */,
 				3942AB6B2BA37A4200203808 /* bodySystemData.json in Resources */,
 				3942AB612BA37A4200203808 /* doctor.obj in Resources */,
 				3942AB322BA379D600203808 /* Preview Assets.xcassets in Resources */,
@@ -372,15 +402,20 @@
 			files = (
 				5B5DEBFB2BC8B4EE00F1251A /* QuestionView.swift in Sources */,
 				3942AB722BA37A4200203808 /* systemsMenu3D.swift in Sources */,
+				DC8359032BD45C7D00C2B320 /* LearnMoreView.swift in Sources */,
+				DC83590C2BD46BD900C2B320 /* SkeletonModelView.swift in Sources */,
+				DC8359082BD45D6B00C2B320 /* AttachmentProvider.swift in Sources */,
 				3942ABB92BA4BEBB00203808 /* difficulty.swift in Sources */,
 				3942ABBA2BA4BEBB00203808 /* DifficultyButton.swift in Sources */,
 				3942AB742BA384AF00203808 /* SkeletalModel.swift in Sources */,
+				DC8359052BD45CC300C2B320 /* ViewModel.swift in Sources */,
 				5B5E37C22BCED45300E88278 /* UserProfileView.swift in Sources */,
 				3942AB2B2BA379D400203808 /* ContentView.swift in Sources */,
 				3942AB702BA37A4200203808 /* MenuView.swift in Sources */,
 				5B5E37C42BCEFA6700E88278 /* UserProfileViewModel.swift in Sources */,
 				3942ABBC2BA4BEBB00203808 /* QuizMenuView.swift in Sources */,
 				3942AB292BA379D400203808 /* VisionDocApp.swift in Sources */,
+				DC83590A2BD45D9F00C2B320 /* Components.swift in Sources */,
 				39725C702BC85E9F00D62630 /* AccountView.swift in Sources */,
 				3942ABAD2BA3F30000203808 /* UrinaryModel.swift in Sources */,
 				3942AB2D2BA379D400203808 /* ImmersiveView.swift in Sources */,
@@ -392,6 +427,7 @@
 				3942AB692BA37A4200203808 /* MenuOptions.swift in Sources */,
 				3942ABBE2BA4BEBB00203808 /* quizView.swift in Sources */,
 				3942ABAF2BA3F34600203808 /* MuscularModel.swift in Sources */,
+				DC83590E2BD4CD5000C2B320 /* SecondView.swift in Sources */,
 				3942AB6C2BA37A4200203808 /* BodyRow.swift in Sources */,
 				3942ABA72BA3F11B00203808 /* NervousModel.swift in Sources */,
 				3942AB6A2BA37A4200203808 /* ModelData.swift in Sources */,
@@ -546,7 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionDoc/Preview Content\"";
-				DEVELOPMENT_TEAM = 8ZQ9K94C68;
+				DEVELOPMENT_TEAM = 4YQKZWWFP6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -561,7 +597,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 1.0;
+				XROS_DEPLOYMENT_TARGET = 1.1;
 			};
 			name = Debug;
 		};
@@ -573,7 +609,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VisionDoc/Preview Content\"";
-				DEVELOPMENT_TEAM = 8ZQ9K94C68;
+				DEVELOPMENT_TEAM = 4YQKZWWFP6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -588,7 +624,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 1.0;
+				XROS_DEPLOYMENT_TARGET = 1.1;
 			};
 			name = Release;
 		};

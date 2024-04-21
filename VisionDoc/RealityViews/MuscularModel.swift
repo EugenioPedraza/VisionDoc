@@ -5,6 +5,7 @@
 //  Created by Eugenio Pedraza on 14/03/24.
 //
 
+
 import SwiftUI
 import RealityKit
 import RealityKitContent
@@ -25,6 +26,11 @@ struct MuscularModel: View {
     }
 }
 
+
+
 #Preview {
     MuscularModel()
 }
+
+
+

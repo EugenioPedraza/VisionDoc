@@ -23,6 +23,10 @@ struct MenuView: View {
                 .tabItem {
                     Label("Profile", systemImage: "person.circle.fill")
                 }
+
+                .tabItem {
+                    Label("Profile", systemImage: "clock")
+                }
         }
     }
 }
