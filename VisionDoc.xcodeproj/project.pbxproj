@@ -47,6 +47,8 @@
 		5B5DEBFB2BC8B4EE00F1251A /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DEBFA2BC8B4EE00F1251A /* QuestionView.swift */; };
 		5B5E37C22BCED45300E88278 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E37C12BCED45300E88278 /* UserProfileView.swift */; };
 		5B5E37C42BCEFA6700E88278 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E37C32BCEFA6700E88278 /* UserProfileViewModel.swift */; };
+		5B5E37C62BD18E2600E88278 /* AnatomyQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5E37C52BD18E2600E88278 /* AnatomyQuizView.swift */; };
+		5B7839E72BD347B300FC6962 /* DragDropViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7839E62BD347B300FC6962 /* DragDropViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		5B5DEBFA2BC8B4EE00F1251A /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		5B5E37C12BCED45300E88278 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		5B5E37C32BCEFA6700E88278 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		5B5E37C52BD18E2600E88278 /* AnatomyQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnatomyQuizView.swift; sourceTree = "<group>"; };
+		5B7839E62BD347B300FC6962 /* DragDropViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +246,8 @@
 				5B5DEBF82BC89F0300F1251A /* BodySystemGridView.swift */,
 				3942ABB72BA4BEBB00203808 /* quizView.swift */,
 				5B5DEBFA2BC8B4EE00F1251A /* QuestionView.swift */,
+				5B5E37C52BD18E2600E88278 /* AnatomyQuizView.swift */,
+				5B7839E62BD347B300FC6962 /* DragDropViewModel.swift */,
 				3942AB2C2BA379D400203808 /* ImmersiveView.swift */,
 				3942AB282BA379D400203808 /* VisionDocApp.swift */,
 				3942AB2A2BA379D400203808 /* ContentView.swift */,
@@ -385,6 +391,7 @@
 				3942ABAD2BA3F30000203808 /* UrinaryModel.swift in Sources */,
 				3942AB2D2BA379D400203808 /* ImmersiveView.swift in Sources */,
 				3942AB682BA37A4200203808 /* BodySystem.swift in Sources */,
+				5B7839E72BD347B300FC6962 /* DragDropViewModel.swift in Sources */,
 				5B5DEBF72BC891F000F1251A /* NetworkManager.swift in Sources */,
 				3942ABA92BA3F29600203808 /* CirculatoryModel.swift in Sources */,
 				3942ABBB2BA4BEBB00203808 /* QuizData.swift in Sources */,
@@ -395,6 +402,7 @@
 				3942AB6C2BA37A4200203808 /* BodyRow.swift in Sources */,
 				3942ABA72BA3F11B00203808 /* NervousModel.swift in Sources */,
 				3942AB6A2BA37A4200203808 /* ModelData.swift in Sources */,
+				5B5E37C62BD18E2600E88278 /* AnatomyQuizView.swift in Sources */,
 				3942AB712BA37A4200203808 /* SceneKitModelView.swift in Sources */,
 				5B5DEBF92BC89F0300F1251A /* BodySystemGridView.swift in Sources */,
 			);
