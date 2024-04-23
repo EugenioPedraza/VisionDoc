@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct MenuView: View {
-    @State var rotationAngle = 0
     var body: some View {
         TabView {
             HomeView()
@@ -20,33 +19,52 @@ struct MenuView: View {
                 .tabItem {
                     Label("Account", systemImage: "person")
                 }
+            UserProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle.fill")
+                }
         }
     }
 }
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            
-            Text("VisionDoc")
-                .font(.custom("SF Pro", size: 130))
-                .fontWeight(.bold)
-            Text("Medicine in your hands")
-                .padding(.bottom, 400)
-                .font(.custom("SF Pro", size: 35))
-            // SceneKitModelView(modelName: "heart.usdz", rotationAngle: 0)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .foregroundColor(.white)
-        .cornerRadius(20)
-        .background {
+        ZStack {
+            // Background
             Image("menuimage")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
-                .cornerRadius(50) // Apply corner radius
-                .clipped() // Clip the image to the rounded corners
-        }
+                .blur(radius: 10)
+
+            // Content
+            VStack {
+                Spacer()
+                
+                Text("VisionDoc")
+                    .font(.system(size: 130))
+                    .fontWeight(.heavy)
+                    .foregroundColor(.white)
+                    .shadow(radius: 10) // Add shadow for better readability
+                
+                Text("breaking the boundaries of education")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+
+                Spacer()
+                NavigationLink(destination: systemsMenu3D(bodySystems: arrBodySystems[1])) {
+                      Text("> Begin your journey")
+                          .monospaced()
+                          .font(.system(size: 25, weight: .bold))
+                          .foregroundColor(.white)
+                          .padding()
+                          .cornerRadius(10)
+                }.navigationTitle("")
+                Spacer()
+
+            }
+        }.clipShape(RoundedRectangle(cornerRadius: 30))
     }
 }
 

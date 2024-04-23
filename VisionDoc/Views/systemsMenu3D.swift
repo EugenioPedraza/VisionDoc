@@ -17,69 +17,78 @@ struct systemsMenu3D: View {
     @State private var rotationAngle: CGFloat = 0
     @State var showModel: Bool = false
     @Environment(\.openWindow) var openWindow
+    @Environment(\.openImmersiveSpace) var openImmersiveSpace
     
     var body: some View {
-
-        Divider()
-            HStack{
-                NavigationSplitView{
-                    ScrollView{
-                        ForEach(arrBodySystems) {bodySystem in
-                            BodyRow(bodySystem: bodySystem, onSelect: {selectedSystem in
-                                self.selectedAnatomy = selectedSystem})
-                        }
-                        .navigationTitle("Systems")
-                    }
-
-                } detail: {
-                    VStack(alignment: .leading){
-                        if let selectedAnatomy = selectedAnatomy {
-                            Text(selectedAnatomy.name)
-                                .font(.system(size: 40))
-                                .fontWeight(.light)
-                                .padding(15)
-                            Divider()
-                            Text(selectedAnatomy.description)
-                                .padding(25)
-                                .font(.system(size: 30))
-                            Button(action: {
-                                switch selectedAnatomy.name{
-                                case "Skeletal System":
-                                    openWindow(id: "skeletalModel")
-                                case "Nervous System":
-                                    openWindow(id: "nervousModel")
-                                case "Muscular System":
-                                    openWindow(id: "muscularModel")
-                                case "Circulatory System":
-                                    openWindow(id: "circulatoryModel")
-                                case "Respiratory System":
-                                    openWindow(id: "respiratoryModel")
-                                case "Urinary System":
-                                    openWindow(id: "urinaryModel")
-                                default:
-                                    break
-                                }
-                            }) {
-                                Text("> Display Model")
-                                    .monospaced()
-                                    .font(.system(size: 20, weight: .bold))
-                            }
-                            .padding(20)
-                            
-                        } else {
-                            Text("Choose an Anatomy System")
-                                .font(.system(size: 30))
-                                .fontWeight(.light)
-                                .padding(15)
-                                .frame(maxWidth: .infinity, maxHeight: 50)
-                                .multilineTextAlignment(.center)
-                        }
-                    }
-                    .padding()
-                    .navigationTitle("Information")
+        NavigationSplitView{
+            ScrollView {
+                ForEach(arrBodySystems) {bodySystem in
+                    BodyRow(bodySystem: bodySystem, onSelect: {selectedSystem in
+                        self.selectedAnatomy = selectedSystem})
                 }
+//                .navigationTitle("Systems")
+            }
+
+        } detail: {
+            VStack(alignment: .leading){
+                if let selectedAnatomy = selectedAnatomy {
+                    Text(selectedAnatomy.name)
+                        .font(.system(size: 40))
+                        .fontWeight(.light)
+                        .padding(15)
+                    Divider()
+                    ScrollView{
+                        Text(selectedAnatomy.description)
+                            .padding(25)
+                        .font(.system(size: 30))}
+                    HStack{
+                        Spacer()
+                        Button(action: {
+                            switch selectedAnatomy.name{
+                            case "Skeletal System":
+                                openWindow(id: "skeletalModel")
+                            case "Nervous System":
+                                openWindow(id: "nervousModel")
+                            case "Muscular System":
+                                openWindow(id: "muscularModel")
+                            case "Circulatory System":
+                                openWindow(id: "circulatoryModel")
+                            case "Respiratory System":
+                                openWindow(id: "respiratoryModel")
+                            default:
+                                break
+                            }
+                        }) {
+                            Text("> Display Model")
+                                .monospaced()
+                                .font(.system(size: 20, weight: .bold))
+                        }
+                        Button(action: {
+                            Task {
+                                await openImmersiveSpace(id: "Immersive")
+                            }
+                            openWindow(id: "ContentViewTest")
+                            
+                        }) {
+                            Text("> Explore Model")
+                                .monospaced()
+                                .font(.system(size: 20, weight: .bold))
+                        }
+                        Spacer()
+                    }
+                    
+                } else {
+                    Text("Choose an Anatomy System")
+                        .font(.system(size: 30))
+                        .fontWeight(.light)
+                        .padding(15)
+                        .frame(maxWidth: .infinity, maxHeight: 50)
+                        .multilineTextAlignment(.center)
+                }
+            }
+            .padding()
+            .navigationTitle("Information")
         }
-        
     }
     
 }

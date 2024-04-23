@@ -22,9 +22,10 @@ struct BodySystemGridView: View {
                         VStack {
                             SceneView(scene: loadModel(named: system.modelName), options: [.autoenablesDefaultLighting, .allowsCameraControl])
                                 .frame(width: 300, height: 300)
-                                .glassBackgroundEffect()
+                                .background(Color.clear)
                                 .clipShape(RoundedRectangle(cornerRadius: 12))
                                 .padding(.bottom, 8)  // Optional padding between the model and the name
+                                .glassBackgroundEffect()
 
                             Text(system.name)
                                 .font(.largeTitle) // Use a suitable font size
@@ -43,8 +44,9 @@ struct BodySystemGridView: View {
     }
 
     func loadModel(named name: String) -> SCNScene? {
-        let scene = try? SCNScene(named: name)
+        let scene = SCNScene(named: name)
         scene?.background.contents = UIColor.clear
+
         return scene
     }
 }
@@ -62,8 +64,3 @@ struct BodySystemGridView_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
-
-
-
-
-

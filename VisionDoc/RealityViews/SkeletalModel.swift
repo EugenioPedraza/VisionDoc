@@ -15,9 +15,9 @@ struct SkeletalModel: View {
     var body: some View {
         RealityView{ content in
             do {
-                let scene =  try await Entity.init(named: "muscleAnatomy.usda", in: realityKitContentBundle)
-                scene.position = SIMD3<Float>(x:0 , y:0 , z:0)
-                scene.scale *= SIMD3<Float>(repeating:0.2)
+                let scene =  try await Entity.init(named: "skeletonAnatomy.usda", in: realityKitContentBundle)
+                scene.position = SIMD3<Float>(x:0 , y:-0.041 , z:0)
+                scene.scale *= SIMD3<Float>(repeating:0.1)
                 content.add(scene)
             } catch {
                 logger.error("\(error.localizedDescription)")

@@ -15,6 +15,7 @@ struct QuestionView: View {
     @State private var isQuizCompleted = false
     @State private var answerSubmitted = false
     @State private var score = 0
+    @State private var userId: Int = UserDefaults.standard.integer(forKey: "userId")
 
     public var columns: [GridItem] = [
         GridItem(.flexible(), spacing: 20),
@@ -34,6 +35,10 @@ struct QuestionView: View {
                     Text("Quiz completed! Your score: \(score)/\(questions.count)")
                         .font(.extraLargeTitle2)
                         .padding()
+                    Button("Save Results") {
+                        saveResults()
+                    }
+                    
                     Button("Restart Quiz") {
                         restartQuiz()
                     }
@@ -128,6 +133,65 @@ struct QuestionView: View {
         loadQuizQuestions()  // Optionally reload questions
     }
     
+    private func saveResults() {
+        guard let url = URL(string: "http://localhost:3000/quiz/results") else {
+            print("Invalid URL")
+            return
+        }
+        let body: [String: Any] = [
+            "userId": userId,
+            "quizId": selectedAnatomy?.id ?? 0,
+            "score": score,
+            "totalQuestions": questions.count
+        ]
+        guard let requestBody = try? JSONSerialization.data(withJSONObject: body, options: []) else {
+            print("Error: Could not encode result data to JSON")
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = requestBody
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error sending results: \(error.localizedDescription)")
+                    // Update the UI to show an error message
+                    return
+                }
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    print("No valid HTTP URL response received.")
+                    return
+                }
+                switch httpResponse.statusCode {
+                case 200:
+                    // Assuming server returns JSON data
+                    if let jsonData = data, let json = try? JSONSerialization.jsonObject(with: jsonData) as? [String: Any] {
+                        print("Results saved successfully: \(json)")
+                        // Update the UI to show a success message
+                    } else {
+                        print("Results saved but no JSON message received.")
+                    }
+                case 400...499:
+                    print("Client error: \(httpResponse.statusCode)")
+                    if let jsonData = data, let json = try? JSONSerialization.jsonObject(with: jsonData) as? [String: Any], let message = json["message"] as? String {
+                        print("Error message from server: \(message)")
+                        // Update the UI to show this error message
+                    }
+                case 500...599:
+                    print("Server error: \(httpResponse.statusCode)")
+                    // Update the UI to show a server error message
+                default:
+                    print("Received unexpected HTTP status code: \(httpResponse.statusCode)")
+                    // Handle unexpected status codes
+                }
+            }
+        }.resume()
+    }
+
+
+    
     private func loadQuizQuestions() {
         guard let systemId = selectedAnatomy?.id, let url = URL(string: "http://localhost:3000/quiz/\(systemId)?difficulty=\(difficulty.rawValue)") else {
             print("Invalid URL or system ID")
@@ -183,11 +247,3 @@ struct AnswerButton: View {
         .buttonStyle(PlainButtonStyle())
     }
 }
-
-
-
-
-
-
-
-

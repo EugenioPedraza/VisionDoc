@@ -29,11 +29,5 @@
         "modelName": "lungs.usdz",
         "description": "Esto es un ejemplo de una descripcion sobre la anatomia respiratoria. En teoria aqui se encontrara informacion relevante para que el usuario tenga un vista general de su seleccion de anatomia humana. Por ello hacemos esto para desplegar informacion. Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion"
     },
-    {
-        "name": "Urinary System",
-        "id": 1006,
-        "modelName": "kidney.usdz",
-        "description": "Esto es un ejemplo de una descripcion sobre la anatomia urinaria. En teoria aqui se encontrara informacion relevante para que el usuario tenga un vista general de su seleccion de anatomia humana. Por ello hacemos esto para desplegar informacion. Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion Informacion"
-    },
     
 ]

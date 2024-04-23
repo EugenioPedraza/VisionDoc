@@ -8,20 +8,43 @@
 import SwiftUI
 import os
 import ARKit
+import RealityKit
 import RealityKitContent
 
 public let logger = Logger()
 
 @main
 struct VisionDocApp: App {
+    
+    private let immersiveSpaceIdentifier = "Immersive"
+    @State private var viewModel = ViewModel()
+    
     init(){
         RealityKitContent.GestureComponent
             .registerComponent()
+        
+        RealityKitContent.PointOfInterestComponent.registerComponent()
+        PointOfInterestRuntimeComponent.registerComponent()
+        RealityKitContent.TrailComponent.registerComponent()
+        RealityKitContent.BillboardComponent.registerComponent()
+        ControlledOpacityComponent.registerComponent()
+        RealityKitContent.RegionSpecificComponent.registerComponent()
+        
+        RealityKitContent.BillboardSystem.registerSystem()
+        RealityKitContent.TrailAnimationSystem.registerSystem()
     }
-    var body: some Scene {
+    
+    var body: some SwiftUI.Scene {
         WindowGroup {
             ContentView()
         }
+        
+        WindowGroup(id: "ContentViewTest") {
+            ContentViewTest(spaceId: immersiveSpaceIdentifier,
+                        viewModel: viewModel)
+        }
+        .windowStyle(.plain)
+        
         WindowGroup(id: "skeletalModel"){
             SkeletalModel()
         } .windowStyle(.volumetric)
@@ -34,7 +57,7 @@ struct VisionDocApp: App {
         WindowGroup(id: "muscularModel"){
             MuscularModel()
         } .windowStyle(.volumetric)
-            .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
+            .defaultSize(width: 10, height: 10, depth: 10, in: .meters)
         
         WindowGroup(id: "circulatoryModel"){
             CirculatoryModel()
@@ -45,9 +68,9 @@ struct VisionDocApp: App {
         } .windowStyle(.volumetric)
             .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
         
-        WindowGroup(id: "urinaryModel"){
-            UrinaryModel()
-        } .windowStyle(.volumetric)
-            .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
+        ImmersiveSpace(id: immersiveSpaceIdentifier) {
+            DioramaView(viewModel: viewModel)
+        }
+        .windowStyle(.automatic)
     }
 }
