@@ -113,37 +113,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-            }
-
-            def RealityKitCustomComponent "RealityKitContent_GestureComponent"
-            {
-                uniform token info:id = "RealityKitContent.GestureComponent"
-            }
-
-            def RealityKitComponent "InputTarget"
-            {
-                uniform token info:id = "RealityKit.InputTarget"
-            }
-
-            def RealityKitComponent "Collider"
-            {
-                uint group = 1
-                uniform token info:id = "RealityKit.Collider"
-                uint mask = 4294967295
-                token type = "Default"
-
-                def RealityKitStruct "Shape"
-                {
-                    float3 extent = (115.076004, 299.99997, 51.48607)
-                    float height = 299.99997
-                    float radius = 57.538002
-                    token shapeType = "Capsule"
-
-                    def RealityKitStruct "pose"
-                    {
-                        float3 position = (-0.39118195, -39.84947, -2.1542826)
-                    }
-                }
+                token region = "detailModel"
             }
         }
 
@@ -161,6 +131,7 @@ def Xform "Root"
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string mainImageName = ""
                 string name = "Pectoralis"
+                token region = "detailModel"
                 string secondImageName = ""
                 string thirdImageName = ""
             }
@@ -180,6 +151,7 @@ def Xform "Root"
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string mainImageName = ""
                 string name = "Deltoid"
+                token region = "detailModel"
                 string secondImageName = ""
                 string thirdImageName = ""
             }
@@ -199,6 +171,7 @@ def Xform "Root"
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string mainImageName = ""
                 string name = "Gluteus Maximus"
+                token region = "detailModel"
                 string secondImageName = ""
                 string thirdImageName = ""
             }
@@ -218,6 +191,7 @@ def Xform "Root"
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string mainImageName = ""
                 string name = "Bicep Femoris"
+                token region = "detailModel"
                 string secondImageName = ""
                 string thirdImageName = ""
             }
@@ -237,6 +211,7 @@ def Xform "Root"
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string mainImageName = ""
                 string name = "Trapezius"
+                token region = "detailModel"
                 string secondImageName = ""
                 string thirdImageName = ""
             }
@@ -256,6 +231,7 @@ def Xform "Root"
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string mainImageName = ""
                 string name = "Brachioradialis"
+                token region = "detailModel"
                 string secondImageName = ""
                 string thirdImageName = ""
             }
@@ -275,6 +251,7 @@ def Xform "Root"
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string mainImageName = ""
                 string name = "Quadriceps"
+                token region = "detailModel"
                 string secondImageName = ""
                 string thirdImageName = ""
             }
@@ -314,6 +291,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -337,6 +315,7 @@ def Xform "Root"
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string mainImageName = ""
                 string name = "Triceps brachii"
+                token region = "detailModel"
                 string secondImageName = ""
                 string thirdImageName = ""
             }
@@ -356,6 +335,7 @@ def Xform "Root"
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string mainImageName = ""
                 string name = "Frontalis"
+                token region = "detailModel"
                 string secondImageName = ""
                 string thirdImageName = ""
             }
@@ -373,6 +353,7 @@ def Xform "Root"
                 string description = "The biceps brachii, located on the front of the upper arm, is responsible for elbow flexion and forearm supination. It is involved in lifting and pulling motions, as well as maintaining arm posture."
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Biceps Brachii"
+                token region = "detailModel"
             }
         }
 
@@ -411,6 +392,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -454,6 +436,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -497,6 +480,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -540,6 +524,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -583,6 +568,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -626,6 +612,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -669,6 +656,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -712,6 +700,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -755,6 +744,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -798,6 +788,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
+                token region = "detailModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -844,7 +835,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -888,7 +879,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -932,7 +923,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -976,7 +967,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -1020,7 +1011,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -1064,7 +1055,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -1108,7 +1099,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -1153,7 +1144,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -1177,7 +1168,7 @@ def Xform "Root"
                 string description = "The fibula, a long, thin bone located in the outer lower leg, runs alongside the tibia from knee to ankle. It plays a crucial role in stabilizing the ankle joint and provides attachment points for various muscles, enabling smooth movement and mobility of the lower leg and foot."
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Fibula"
-                token region = "detailModel"
+                token region = "mainModel"
             }
         }
 
@@ -1195,7 +1186,7 @@ def Xform "Root"
                 string description = "The tibia, also known as the shinbone, is the larger and stronger of the two bones in the lower leg. It bears the majority of the body's weight and plays a vital role in supporting the knee and ankle joints. The tibia connects the knee to the ankle and provides attachment points for several muscles, enabling walking, running, and other weight-bearing activities."
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Tibia"
-                token region = "detailModel"
+                token region = "mainModel"
             }
         }
 
@@ -1213,7 +1204,7 @@ def Xform "Root"
                 string description = "The mandible, or lower jawbone, is the largest and strongest bone in the facial skeleton. It is the only movable bone in the skull and plays a crucial role in speech, chewing, and swallowing. The mandible is connected to the temporal bones by the temporomandibular joints (TMJ) and provides attachment points for various muscles involved in jaw movement. Its horseshoe-like shape supports the lower teeth and contributes to the overall structure and appearance of the face."
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Mandible"
-                token region = "detailModel"
+                token region = "mainModel"
             }
         }
 
@@ -1230,7 +1221,7 @@ def Xform "Root"
             {
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Humerus"
-                token region = "detailModel"
+                token region = "mainModel"
             }
         }
 
@@ -1268,7 +1259,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -1312,7 +1303,7 @@ def Xform "Root"
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             def RealityKitComponent "HierarchicalFade"
@@ -1336,7 +1327,7 @@ def Xform "Root"
                 string description = "The sternum, also known as the breastbone, is a flat, elongated bone located in the center of the chest. It serves as a connection point for the ribs, forming the anterior part of the rib cage. The sternum plays a vital role in protecting the heart, lungs, and major blood vessels from external impact. It also provides attachment points for several muscles, including the pectoralis major and the sternocleidomastoid. The sternum consists of three parts: the manubrium, the body, and the xiphoid process, which ossify and fuse together as an individual ages."
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Sternum"
-                token region = "detailModel"
+                token region = "mainModel"
             }
         }
 
@@ -1354,7 +1345,7 @@ def Xform "Root"
                 string description = "The frontal bone is a large, unpaired cranial bone that forms the forehead and the anterior portion of the skull. It extends from the eyebrows to the coronal suture, where it articulates with the parietal bones. The frontal bone plays a crucial role in protecting the brain, particularly the frontal lobes, which are responsible for executive functions, decision-making, and behavior. It also forms the upper part of the eye sockets (orbits) and contains the frontal sinuses, which are air-filled cavities that help reduce the weight of the skull. The frontal bone has several prominent features, including the supraorbital margins, the glabella, and the zygomatic processes, which contribute to the unique appearance of an individual's forehead and brow region."
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Frontal Bone"
-                token region = "detailModel"
+                token region = "mainModel"
             }
         }
 
@@ -1372,7 +1363,7 @@ def Xform "Root"
                 string description = "The scapula, or shoulder blade, is a large, flat, triangular bone located in the upper back. It articulates with the humerus at the glenoid cavity, forming the shoulder joint. The scapula provides attachment points for numerous muscles, including the rotator cuff, enabling shoulder movement and stability. Its prominent features include the acromion process, spine, and supraspinous and infraspinous fossae. The scapula's position and function are crucial for proper upper limb mobility and overall shoulder health."
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Scapulla"
-                token region = "detailModel"
+                token region = "mainModel"
             }
         }
 
@@ -1390,7 +1381,7 @@ def Xform "Root"
                 string description = "Vertebrae are the individual bones that form the spinal column, divided into five regions: cervical, thoracic, lumbar, sacrum, and coccyx. Each vertebra consists of a body, vertebral arch, and processes for muscle and ligament attachment. They protect the spinal cord, provide structural support, and allow for flexibility and movement. Intervertebral discs between each vertebra act as shock absorbers and distribute stress evenly. The vertebrae, discs, ligaments, and muscles work together to maintain posture, facilitate movement, and support the body's weight."
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Vertabrae"
-                token region = "detailModel"
+                token region = "mainModel"
             }
         }
 
@@ -1416,7 +1407,7 @@ The pelvis is a large, bowl-shaped structure at the base of the spine, formed by
 """
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Pelvis"
-                token region = "detailModel"
+                token region = "mainModel"
             }
         }
 
@@ -1434,7 +1425,7 @@ The pelvis is a large, bowl-shaped structure at the base of the spine, formed by
                 string description = "The femur, the longest and strongest bone in the body, extends from hip to knee, supporting weight and facilitating lower limb movement. Its proximal end forms the hip joint, while the distal end forms the knee joint. The femur features the greater and lesser trochanters for muscle attachment and the linea aspera ridge. Its strong structure withstands significant forces during activities. Femoral fractures can be severe. The femur is crucial for lower limb stability, strength, and mobility."
                 uniform token info:id = "RealityKitContent.PointOfInterestComponent"
                 string name = "Femur"
-                token region = "detailModel"
+                token region = "mainModel"
             }
         }
 
@@ -1452,7 +1443,7 @@ The pelvis is a large, bowl-shaped structure at the base of the spine, formed by
             def RealityKitCustomComponent "RealityKitContent_RegionSpecificComponent"
             {
                 uniform token info:id = "RealityKitContent.RegionSpecificComponent"
-                token region = "detailModel"
+                token region = "mainModel"
             }
 
             over "Materials"
@@ -1462,6 +1453,35 @@ The pelvis is a large, bowl-shaped structure at the base of the spine, formed by
                     token outputs:mtlx:surface
                     token outputs:realitykit:vertex
                 }
+            }
+        }
+    }
+
+    def RealityKitComponent "InputTarget"
+    {
+        uniform token info:id = "RealityKit.InputTarget"
+    }
+
+    def RealityKitCustomComponent "RealityKitContent_GestureComponent"
+    {
+        uniform token info:id = "RealityKitContent.GestureComponent"
+    }
+
+    def RealityKitComponent "Collider"
+    {
+        uint group = 1
+        uniform token info:id = "RealityKit.Collider"
+        uint mask = 4294967295
+        token type = "Default"
+
+        def RealityKitStruct "Shape"
+        {
+            float3 extent = (1.2957131, 1.9018908, 1.0117425)
+            token shapeType = "Box"
+
+            def RealityKitStruct "pose"
+            {
+                float3 position = (0.1012854, 1.1005371, 0.13915312)
             }
         }
     }

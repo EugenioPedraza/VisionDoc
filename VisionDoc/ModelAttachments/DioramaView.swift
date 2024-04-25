@@ -20,6 +20,8 @@ struct DioramaView: View {
     @State private var subscriptions = [EventSubscription]()
     @State private var attachmentsProvider = AttachmentsProvider()
 
+    @State private var point3D = Point3D()
+    
     var body: some View {
         @Bindable var viewModel = viewModel
         
@@ -100,6 +102,7 @@ struct DioramaView: View {
                 }
             }
         }
+        .installGestures(location: $point3D)
     }
     
     private func createLearnMoreView(for entity: Entity) {

@@ -11,7 +11,7 @@ struct MenuView: View {
                 .tabItem {
                     Label("Learn", systemImage: "book")
                 }
-            QuizView()
+            AnatomyQuizView2()
                 .tabItem {
                     Label("Quiz", systemImage: "questionmark.circle")
                 }
