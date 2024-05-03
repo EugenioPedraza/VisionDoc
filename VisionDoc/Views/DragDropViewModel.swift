@@ -57,6 +57,11 @@ class QuizViewModel: ObservableObject {
     @Published var isLabelCorrect: [String: Bool] = [:]
     @Published var isLoading = true
     @Published var isQuizCompleted = false
+    
+    
+    var isLastSystem: Bool {
+        currentSystemIndex == systems.count - 1
+    }
 
     private var cancellables = Set<AnyCancellable>()
     
@@ -90,27 +95,47 @@ class QuizViewModel: ObservableObject {
 
     func setupInitialPositions() {
         guard let system = systems[safe: currentSystemIndex] else { return }
+        var yOffset: CGFloat = 0 // Start at 0 and increment for each label
+        let ySpacing: CGFloat = 75 // Space between labels
+
         labelPositions = system.labels.reduce(into: [:]) { result, label in
-            if let zone = system.dropZones.first(where: { $0.label == label }) {
-                result[label] = CGPoint(x: zone.positionX, y: zone.positionY)
-                isLabelCorrect[label] = false
+            result[label] = CGPoint(x: 100, y: 400 + yOffset)
+            isLabelCorrect[label] = false
+            yOffset += ySpacing // Increment the yOffset for the next label
+        }
+    }
+
+
+    func finalizeLabelPosition(label: String, position: CGPoint) {
+        guard let system = currentSystem else { return }
+
+        // Find the drop zone that corresponds to the label
+        if let zone = system.dropZones.first(where: { $0.label == label }) {
+            // Create a CGRect for the drop zone
+            let zoneRect = CGRect(x: zone.positionX, y: zone.positionY, width: zone.width, height: zone.height)
+            
+            // If the position is within the drop zone, update the label position and mark as correct
+            if zoneRect.contains(position) {
+                DispatchQueue.main.async {
+                    // Set label position to the center of the drop zone
+                    let center = CGPoint(x: zone.positionX + zone.width / 2, y: zone.positionY + zone.height / 2)
+                    self.labelPositions[label] = center
+                    self.isLabelCorrect[label] = true
+                }
+            } else {
+                // If not in a drop zone, reset the position and mark as incorrect
+                DispatchQueue.main.async {
+                    self.isLabelCorrect[label] = false
+                    // Optionally reset the label position if needed
+                    // self.labelPositions[label] = initialPositionForLabel(label)
+                }
             }
         }
     }
 
-    func finalizeLabelPosition(label: String, position: CGPoint, system: AnatomySystem) {
-        guard let dropZone = system.dropZones.first(where: { $0.label == label }) else { return }
-        let dropRect = CGRect(x: dropZone.positionX, y: dropZone.positionY, width: dropZone.width, height: dropZone.height)
-        if dropRect.contains(position) {
-            // Snap label to the center of the drop zone
-            withAnimation {
-                labelPositions[label] = CGPoint(x: dropRect.midX, y: dropRect.midY)
-                isLabelCorrect[label] = true
-            }
-        } else {
-            isLabelCorrect[label] = false
-        }
-    }
+
+
+
 
     
     var allLabelsCorrect: Bool {
