@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		392982E02BE4941A00247195 /* SharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392982DF2BE4941A00247195 /* SharedViewModel.swift */; };
 		392982E22BE4977900247195 /* NervousDioramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392982E12BE4977900247195 /* NervousDioramaView.swift */; };
-		393C0C092BD852BD002641E0 /* AnatomyQuizView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C0C082BD852BD002641E0 /* AnatomyQuizView2.swift */; };
 		3942AB272BA379D400203808 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 3942AB262BA379D400203808 /* RealityKitContent */; };
 		3942AB292BA379D400203808 /* VisionDocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942AB282BA379D400203808 /* VisionDocApp.swift */; };
 		3942AB2B2BA379D400203808 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942AB2A2BA379D400203808 /* ContentView.swift */; };
@@ -39,21 +38,25 @@
 		3942ABAF2BA3F34600203808 /* MuscularModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABAE2BA3F34600203808 /* MuscularModel.swift */; };
 		3942ABB12BA4BEA900203808 /* Quiz.json in Resources */ = {isa = PBXBuildFile; fileRef = 3942ABB02BA4BEA900203808 /* Quiz.json */; };
 		3942ABB92BA4BEBB00203808 /* difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB22BA4BEBB00203808 /* difficulty.swift */; };
-		3942ABBA2BA4BEBB00203808 /* DifficultyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB32BA4BEBB00203808 /* DifficultyButton.swift */; };
-		3942ABBB2BA4BEBB00203808 /* QuizData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB42BA4BEBB00203808 /* QuizData.swift */; };
 		3942ABBC2BA4BEBB00203808 /* QuizMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB52BA4BEBB00203808 /* QuizMenuView.swift */; };
-		3942ABBE2BA4BEBB00203808 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942ABB72BA4BEBB00203808 /* QuizView.swift */; };
+		39462EB32BE57864001EE661 /* DifficultyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462EAA2BE57863001EE661 /* DifficultyButton.swift */; };
+		39462EB42BE57864001EE661 /* AnatomyQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462EAB2BE57863001EE661 /* AnatomyQuizView.swift */; };
+		39462EB52BE57864001EE661 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462EAC2BE57863001EE661 /* AccountView.swift */; };
+		39462EB72BE57864001EE661 /* DragDropViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462EAE2BE57863001EE661 /* DragDropViewModel.swift */; };
+		39462EB92BE57864001EE661 /* BodySystemGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462EB02BE57864001EE661 /* BodySystemGridView.swift */; };
+		39462EBA2BE57864001EE661 /* QuizTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462EB12BE57864001EE661 /* QuizTypeSelectionView.swift */; };
+		39462EBB2BE57864001EE661 /* quizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462EB22BE57864001EE661 /* quizView.swift */; };
+		39462EC02BE578F9001EE661 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462EBC2BE578F9001EE661 /* UserProfileViewModel.swift */; };
+		39462EC12BE578F9001EE661 /* QuizData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462EBD2BE578F9001EE661 /* QuizData.swift */; };
+		39462EC32BE578F9001EE661 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39462EBF2BE578F9001EE661 /* NetworkManager.swift */; };
 		3961B44E2BD6EEEE00F0B33F /* ContentViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3961B4482BD6EEED00F0B33F /* ContentViewTest.swift */; };
 		3961B44F2BD6EEEE00F0B33F /* AttachmentsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3961B4492BD6EEED00F0B33F /* AttachmentsProvider.swift */; };
 		3961B4502BD6EEEE00F0B33F /* DioramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3961B44A2BD6EEED00F0B33F /* DioramaView.swift */; };
 		3961B4512BD6EEEE00F0B33F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3961B44B2BD6EEEE00F0B33F /* ViewModel.swift */; };
 		3961B4522BD6EEEE00F0B33F /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3961B44C2BD6EEEE00F0B33F /* Components.swift */; };
 		3961B4532BD6EEEE00F0B33F /* LearnMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3961B44D2BD6EEEE00F0B33F /* LearnMoreView.swift */; };
-		39725C702BC85E9F00D62630 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39725C6F2BC85E9F00D62630 /* AccountView.swift */; };
 		3987B7792BD728D4006F487E /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3987B7782BD728D4006F487E /* UserProfileView.swift */; };
-		3987B77B2BD728E8006F487E /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3987B77A2BD728E8006F487E /* UserProfileViewModel.swift */; };
-		5B5DEBF72BC891F000F1251A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DEBF62BC891EF00F1251A /* NetworkManager.swift */; };
-		5B5DEBF92BC89F0300F1251A /* BodySystemGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DEBF82BC89F0300F1251A /* BodySystemGridView.swift */; };
+		39E5325B2BE57F1D006A5B8B /* skeleton.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 39E5325A2BE57F1C006A5B8B /* skeleton.usdz */; };
 		5B5DEBFB2BC8B4EE00F1251A /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5DEBFA2BC8B4EE00F1251A /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +73,6 @@
 /* Begin PBXFileReference section */
 		392982DF2BE4941A00247195 /* SharedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewModel.swift; sourceTree = "<group>"; };
 		392982E12BE4977900247195 /* NervousDioramaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NervousDioramaView.swift; sourceTree = "<group>"; };
-		393C0C082BD852BD002641E0 /* AnatomyQuizView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnatomyQuizView2.swift; sourceTree = "<group>"; };
 		3942AB212BA379D400203808 /* VisionDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3942AB252BA379D400203808 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		3942AB282BA379D400203808 /* VisionDocApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionDocApp.swift; sourceTree = "<group>"; };
@@ -104,21 +106,25 @@
 		3942ABAE2BA3F34600203808 /* MuscularModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscularModel.swift; sourceTree = "<group>"; };
 		3942ABB02BA4BEA900203808 /* Quiz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quiz.json; sourceTree = "<group>"; };
 		3942ABB22BA4BEBB00203808 /* difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = difficulty.swift; sourceTree = "<group>"; };
-		3942ABB32BA4BEBB00203808 /* DifficultyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultyButton.swift; sourceTree = "<group>"; };
-		3942ABB42BA4BEBB00203808 /* QuizData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizData.swift; sourceTree = "<group>"; };
 		3942ABB52BA4BEBB00203808 /* QuizMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizMenuView.swift; sourceTree = "<group>"; };
-		3942ABB72BA4BEBB00203808 /* QuizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		39462EAA2BE57863001EE661 /* DifficultyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DifficultyButton.swift; path = "../../../../Downloads/quiz 2/DifficultyButton.swift"; sourceTree = "<group>"; };
+		39462EAB2BE57863001EE661 /* AnatomyQuizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnatomyQuizView.swift; path = "../../../../Downloads/quiz 2/AnatomyQuizView.swift"; sourceTree = "<group>"; };
+		39462EAC2BE57863001EE661 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountView.swift; path = "../../../../Downloads/quiz 2/AccountView.swift"; sourceTree = "<group>"; };
+		39462EAE2BE57863001EE661 /* DragDropViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DragDropViewModel.swift; path = "../../../../Downloads/quiz 2/DragDropViewModel.swift"; sourceTree = "<group>"; };
+		39462EB02BE57864001EE661 /* BodySystemGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BodySystemGridView.swift; path = "../../../../Downloads/quiz 2/BodySystemGridView.swift"; sourceTree = "<group>"; };
+		39462EB12BE57864001EE661 /* QuizTypeSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTypeSelectionView.swift; sourceTree = "<group>"; };
+		39462EB22BE57864001EE661 /* quizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = quizView.swift; path = "../../../../Downloads/quiz 2/quizView.swift"; sourceTree = "<group>"; };
+		39462EBC2BE578F9001EE661 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileViewModel.swift; path = "../../../../Downloads/quiz 3/UserProfileViewModel.swift"; sourceTree = "<group>"; };
+		39462EBD2BE578F9001EE661 /* QuizData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizData.swift; path = "../../../../Downloads/quiz 3/QuizData.swift"; sourceTree = "<group>"; };
+		39462EBF2BE578F9001EE661 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "../../../../Downloads/quiz 3/NetworkManager.swift"; sourceTree = "<group>"; };
 		3961B4482BD6EEED00F0B33F /* ContentViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewTest.swift; sourceTree = "<group>"; };
 		3961B4492BD6EEED00F0B33F /* AttachmentsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentsProvider.swift; sourceTree = "<group>"; };
 		3961B44A2BD6EEED00F0B33F /* DioramaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DioramaView.swift; sourceTree = "<group>"; };
 		3961B44B2BD6EEEE00F0B33F /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3961B44C2BD6EEEE00F0B33F /* Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		3961B44D2BD6EEEE00F0B33F /* LearnMoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnMoreView.swift; sourceTree = "<group>"; };
-		39725C6F2BC85E9F00D62630 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		3987B7782BD728D4006F487E /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
-		3987B77A2BD728E8006F487E /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
-		5B5DEBF62BC891EF00F1251A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		5B5DEBF82BC89F0300F1251A /* BodySystemGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodySystemGridView.swift; sourceTree = "<group>"; };
+		39E5325A2BE57F1C006A5B8B /* skeleton.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = skeleton.usdz; sourceTree = "<group>"; };
 		5B5DEBFA2BC8B4EE00F1251A /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +209,7 @@
 		3942AB4E2BA37A4100203808 /* 3D Models */ = {
 			isa = PBXGroup;
 			children = (
+				39E5325A2BE57F1C006A5B8B /* skeleton.usdz */,
 				3942AB462BA37A4100203808 /* anatomyscene.usdz */,
 				3942AB472BA37A4100203808 /* bone.scn */,
 				3942AB482BA37A4100203808 /* doctor.obj */,
@@ -233,11 +240,11 @@
 				3942ABB22BA4BEBB00203808 /* difficulty.swift */,
 				3942AB512BA37A4100203808 /* BodySystem.swift */,
 				392982DF2BE4941A00247195 /* SharedViewModel.swift */,
-				3987B77A2BD728E8006F487E /* UserProfileViewModel.swift */,
+				39462EBF2BE578F9001EE661 /* NetworkManager.swift */,
+				39462EBD2BE578F9001EE661 /* QuizData.swift */,
+				39462EBC2BE578F9001EE661 /* UserProfileViewModel.swift */,
 				3942AB522BA37A4100203808 /* MenuOptions.swift */,
 				3942AB532BA37A4100203808 /* ModelData.swift */,
-				3942ABB42BA4BEBB00203808 /* QuizData.swift */,
-				5B5DEBF62BC891EF00F1251A /* NetworkManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,19 +261,21 @@
 		3942AB5E2BA37A4200203808 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3942ABB32BA4BEBB00203808 /* DifficultyButton.swift */,
+				39462EAC2BE57863001EE661 /* AccountView.swift */,
+				39462EAB2BE57863001EE661 /* AnatomyQuizView.swift */,
+				39462EB02BE57864001EE661 /* BodySystemGridView.swift */,
 				3942ABB52BA4BEBB00203808 /* QuizMenuView.swift */,
-				5B5DEBF82BC89F0300F1251A /* BodySystemGridView.swift */,
-				3942ABB72BA4BEBB00203808 /* QuizView.swift */,
-				393C0C082BD852BD002641E0 /* AnatomyQuizView2.swift */,
+				39462EAE2BE57863001EE661 /* DragDropViewModel.swift */,
 				5B5DEBFA2BC8B4EE00F1251A /* QuestionView.swift */,
 				3987B7782BD728D4006F487E /* UserProfileView.swift */,
 				3942AB2C2BA379D400203808 /* ImmersiveView.swift */,
+				39462EAA2BE57863001EE661 /* DifficultyButton.swift */,
+				39462EB12BE57864001EE661 /* QuizTypeSelectionView.swift */,
+				39462EB22BE57864001EE661 /* quizView.swift */,
 				3942AB282BA379D400203808 /* VisionDocApp.swift */,
 				3942AB2A2BA379D400203808 /* ContentView.swift */,
 				3942AB572BA37A4200203808 /* BodyRow.swift */,
 				3942AB5B2BA37A4200203808 /* MenuView.swift */,
-				39725C6F2BC85E9F00D62630 /* AccountView.swift */,
 				3942AB5C2BA37A4200203808 /* SceneKitModelView.swift */,
 				3942AB5D2BA37A4200203808 /* systemsMenu3D.swift */,
 			);
@@ -376,6 +385,7 @@
 			files = (
 				3942AB652BA37A4200203808 /* muscle.usdz in Resources */,
 				3942AB662BA37A4200203808 /* nerve_cell.scn in Resources */,
+				39E5325B2BE57F1D006A5B8B /* skeleton.usdz in Resources */,
 				3942AB6B2BA37A4200203808 /* bodySystemData.json in Resources */,
 				3942AB612BA37A4200203808 /* doctor.obj in Resources */,
 				3942AB322BA379D600203808 /* Preview Assets.xcassets in Resources */,
@@ -405,38 +415,40 @@
 				5B5DEBFB2BC8B4EE00F1251A /* QuestionView.swift in Sources */,
 				3942AB722BA37A4200203808 /* systemsMenu3D.swift in Sources */,
 				3942ABB92BA4BEBB00203808 /* difficulty.swift in Sources */,
-				3942ABBA2BA4BEBB00203808 /* DifficultyButton.swift in Sources */,
+				39462EC32BE578F9001EE661 /* NetworkManager.swift in Sources */,
 				3942AB742BA384AF00203808 /* SkeletalModel.swift in Sources */,
-				3987B77B2BD728E8006F487E /* UserProfileViewModel.swift in Sources */,
+				39462EC02BE578F9001EE661 /* UserProfileViewModel.swift in Sources */,
 				3961B44F2BD6EEEE00F0B33F /* AttachmentsProvider.swift in Sources */,
 				3961B4512BD6EEEE00F0B33F /* ViewModel.swift in Sources */,
 				3961B4522BD6EEEE00F0B33F /* Components.swift in Sources */,
+				39462EB42BE57864001EE661 /* AnatomyQuizView.swift in Sources */,
 				3942AB2B2BA379D400203808 /* ContentView.swift in Sources */,
 				392982E22BE4977900247195 /* NervousDioramaView.swift in Sources */,
-				393C0C092BD852BD002641E0 /* AnatomyQuizView2.swift in Sources */,
 				3942AB702BA37A4200203808 /* MenuView.swift in Sources */,
 				3942ABBC2BA4BEBB00203808 /* QuizMenuView.swift in Sources */,
 				3942AB292BA379D400203808 /* VisionDocApp.swift in Sources */,
 				3961B4532BD6EEEE00F0B33F /* LearnMoreView.swift in Sources */,
-				39725C702BC85E9F00D62630 /* AccountView.swift in Sources */,
 				3961B4502BD6EEEE00F0B33F /* DioramaView.swift in Sources */,
 				3942AB2D2BA379D400203808 /* ImmersiveView.swift in Sources */,
 				3942AB682BA37A4200203808 /* BodySystem.swift in Sources */,
-				5B5DEBF72BC891F000F1251A /* NetworkManager.swift in Sources */,
+				39462EB32BE57864001EE661 /* DifficultyButton.swift in Sources */,
 				3961B44E2BD6EEEE00F0B33F /* ContentViewTest.swift in Sources */,
 				3942ABA92BA3F29600203808 /* CirculatoryModel.swift in Sources */,
 				392982E02BE4941A00247195 /* SharedViewModel.swift in Sources */,
-				3942ABBB2BA4BEBB00203808 /* QuizData.swift in Sources */,
 				3942ABAB2BA3F2D300203808 /* RespiratoryModel.swift in Sources */,
 				3942AB692BA37A4200203808 /* MenuOptions.swift in Sources */,
-				3942ABBE2BA4BEBB00203808 /* QuizView.swift in Sources */,
 				3942ABAF2BA3F34600203808 /* MuscularModel.swift in Sources */,
 				3942AB6C2BA37A4200203808 /* BodyRow.swift in Sources */,
+				39462EB72BE57864001EE661 /* DragDropViewModel.swift in Sources */,
+				39462EB52BE57864001EE661 /* AccountView.swift in Sources */,
+				39462EB92BE57864001EE661 /* BodySystemGridView.swift in Sources */,
+				39462EBA2BE57864001EE661 /* QuizTypeSelectionView.swift in Sources */,
+				39462EBB2BE57864001EE661 /* quizView.swift in Sources */,
 				3987B7792BD728D4006F487E /* UserProfileView.swift in Sources */,
 				3942ABA72BA3F11B00203808 /* NervousModel.swift in Sources */,
 				3942AB6A2BA37A4200203808 /* ModelData.swift in Sources */,
 				3942AB712BA37A4200203808 /* SceneKitModelView.swift in Sources */,
-				5B5DEBF92BC89F0300F1251A /* BodySystemGridView.swift in Sources */,
+				39462EC12BE578F9001EE661 /* QuizData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

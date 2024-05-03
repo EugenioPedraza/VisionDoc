@@ -18,7 +18,7 @@ struct QuizMenuView: View {
 
     private func loadBodySystems() {
         // Assuming this function fetches data from your API
-        let url = URL(string: "http://localhost:3000/systems")!
+        let url = URL(string: "http://10.22.236.13:3000/systems")!
         NetworkManager.shared.fetchData(url: url) { (result: Result<[BodySystem], Error>) in
             switch result {
             case .success(let systems):
@@ -29,5 +29,6 @@ struct QuizMenuView: View {
         }
     }
 }
+
 
 

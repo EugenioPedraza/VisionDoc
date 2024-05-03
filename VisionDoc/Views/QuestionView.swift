@@ -134,7 +134,7 @@ struct QuestionView: View {
     }
     
     private func saveResults() {
-        guard let url = URL(string: "http://localhost:3000/quiz/results") else {
+        guard let url = URL(string: "http://10.22.236.13:3000/quiz/results") else {
             print("Invalid URL")
             return
         }
@@ -193,7 +193,7 @@ struct QuestionView: View {
 
     
     private func loadQuizQuestions() {
-        guard let systemId = selectedAnatomy?.id, let url = URL(string: "http://localhost:3000/quiz/\(systemId)?difficulty=\(difficulty.rawValue)") else {
+        guard let systemId = selectedAnatomy?.id, let url = URL(string: "http://10.22.236.13:3000/quiz/\(systemId)?difficulty=\(difficulty.rawValue)") else {
             print("Invalid URL or system ID")
             return
         }
@@ -247,3 +247,11 @@ struct AnswerButton: View {
         .buttonStyle(PlainButtonStyle())
     }
 }
+
+
+
+
+
+
+
+

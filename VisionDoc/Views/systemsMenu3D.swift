@@ -26,6 +26,7 @@ struct systemsMenu3D: View {
                 ForEach(arrBodySystems) {bodySystem in
                     BodyRow(bodySystem: bodySystem, onSelect: {selectedSystem in
                         self.selectedAnatomy = selectedSystem})
+                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 25, height: 20)))
                 }
                 .navigationTitle("Systems")
             }
