@@ -10,6 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct systemsMenu3D: View {
+    @EnvironmentObject var sharedViewModel: SharedViewModel
     
     var bodySystems: BodySystem
     @State private var selectedAnatomy: BodySystem?
@@ -26,7 +27,7 @@ struct systemsMenu3D: View {
                     BodyRow(bodySystem: bodySystem, onSelect: {selectedSystem in
                         self.selectedAnatomy = selectedSystem})
                 }
-//                .navigationTitle("Systems")
+                .navigationTitle("Systems")
             }
 
         } detail: {
@@ -64,10 +65,17 @@ struct systemsMenu3D: View {
                                 .font(.system(size: 20, weight: .bold))
                         }
                         Button(action: {
-                            Task {
-                                await openImmersiveSpace(id: "Immersive")
+                            if (selectedAnatomy.name == "Nervous System"){
+                                Task {
+                                    await openImmersiveSpace(id: "ImmersiveNervous")
+                                }
+                                openWindow(id: "nervousModel")
+                            } else {
+                                Task {
+                                    await openImmersiveSpace(id: "Immersive")
+                                }
+                                openWindow(id: "ContentViewTest")
                             }
-                            openWindow(id: "ContentViewTest")
                             
                         }) {
                             Text("> Explore Model")
@@ -95,5 +103,5 @@ struct systemsMenu3D: View {
     
 
 #Preview(){
-        systemsMenu3D(bodySystems: arrBodySystems[1])
+        systemsMenu3D(bodySystems: arrBodySystems[0])
 }

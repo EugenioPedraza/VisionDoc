@@ -22,9 +22,8 @@ struct SceneKitModelView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: SCNView, context: Context) {
-
-        let rotationAction = SCNAction.rotateBy(x: 0, y: rotationAngle, z: 0, duration: 10.0)
-        uiView.scene?.rootNode.runAction(rotationAction)
+            let rotationAction = SCNAction.rotateBy(x: 0, y: rotationAngle, z: 0, duration: 15.0)
+            uiView.scene?.rootNode.runAction(rotationAction)
     }
 }
 

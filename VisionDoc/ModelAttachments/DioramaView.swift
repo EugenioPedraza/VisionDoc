@@ -10,6 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct DioramaView: View {
+    @EnvironmentObject var sharedViewModel: SharedViewModel
     @Environment(\.dismiss) private var dismiss
 
     var viewModel: ViewModel

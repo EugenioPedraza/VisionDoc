@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		392982E02BE4941A00247195 /* SharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392982DF2BE4941A00247195 /* SharedViewModel.swift */; };
+		392982E22BE4977900247195 /* NervousDioramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392982E12BE4977900247195 /* NervousDioramaView.swift */; };
 		393C0C092BD852BD002641E0 /* AnatomyQuizView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C0C082BD852BD002641E0 /* AnatomyQuizView2.swift */; };
 		3942AB272BA379D400203808 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 3942AB262BA379D400203808 /* RealityKitContent */; };
 		3942AB292BA379D400203808 /* VisionDocApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3942AB282BA379D400203808 /* VisionDocApp.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		392982DF2BE4941A00247195 /* SharedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewModel.swift; sourceTree = "<group>"; };
+		392982E12BE4977900247195 /* NervousDioramaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NervousDioramaView.swift; sourceTree = "<group>"; };
 		393C0C082BD852BD002641E0 /* AnatomyQuizView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnatomyQuizView2.swift; sourceTree = "<group>"; };
 		3942AB212BA379D400203808 /* VisionDoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionDoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3942AB252BA379D400203808 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 			children = (
 				3942ABB22BA4BEBB00203808 /* difficulty.swift */,
 				3942AB512BA37A4100203808 /* BodySystem.swift */,
+				392982DF2BE4941A00247195 /* SharedViewModel.swift */,
 				3987B77A2BD728E8006F487E /* UserProfileViewModel.swift */,
 				3942AB522BA37A4100203808 /* MenuOptions.swift */,
 				3942AB532BA37A4100203808 /* ModelData.swift */,
@@ -275,6 +280,7 @@
 				3961B44C2BD6EEEE00F0B33F /* Components.swift */,
 				3961B4482BD6EEED00F0B33F /* ContentViewTest.swift */,
 				3961B44A2BD6EEED00F0B33F /* DioramaView.swift */,
+				392982E12BE4977900247195 /* NervousDioramaView.swift */,
 				3961B44D2BD6EEEE00F0B33F /* LearnMoreView.swift */,
 				3961B44B2BD6EEEE00F0B33F /* ViewModel.swift */,
 			);
@@ -406,6 +412,7 @@
 				3961B4512BD6EEEE00F0B33F /* ViewModel.swift in Sources */,
 				3961B4522BD6EEEE00F0B33F /* Components.swift in Sources */,
 				3942AB2B2BA379D400203808 /* ContentView.swift in Sources */,
+				392982E22BE4977900247195 /* NervousDioramaView.swift in Sources */,
 				393C0C092BD852BD002641E0 /* AnatomyQuizView2.swift in Sources */,
 				3942AB702BA37A4200203808 /* MenuView.swift in Sources */,
 				3942ABBC2BA4BEBB00203808 /* QuizMenuView.swift in Sources */,
@@ -418,6 +425,7 @@
 				5B5DEBF72BC891F000F1251A /* NetworkManager.swift in Sources */,
 				3961B44E2BD6EEEE00F0B33F /* ContentViewTest.swift in Sources */,
 				3942ABA92BA3F29600203808 /* CirculatoryModel.swift in Sources */,
+				392982E02BE4941A00247195 /* SharedViewModel.swift in Sources */,
 				3942ABBB2BA4BEBB00203808 /* QuizData.swift in Sources */,
 				3942ABAB2BA3F2D300203808 /* RespiratoryModel.swift in Sources */,
 				3942AB692BA37A4200203808 /* MenuOptions.swift in Sources */,

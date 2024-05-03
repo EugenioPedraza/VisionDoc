@@ -53,7 +53,7 @@ struct HomeView: View {
                     .shadow(radius: 5)
 
                 Spacer()
-                NavigationLink(destination: systemsMenu3D(bodySystems: arrBodySystems[1])) {
+                NavigationLink(destination: LearnView()) {
                       Text("> Begin your journey")
                           .monospaced()
                           .font(.system(size: 25, weight: .bold))

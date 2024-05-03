@@ -7,7 +7,7 @@ struct CirculatoryModel: View {
         RealityView{ content in
             do {
                 let scene = try await Entity.init(named: "heartAnimated.usda", in: realityKitContentBundle)
-                scene.position = SIMD3<Float>(x: 0, y: -0.03, z: 0)
+                scene.position = SIMD3<Float>(x: 0, y: -0.08, z: 0.003)
                 scene.scale *= SIMD3<Float>(repeating: 0.1)
                 content.add(scene)
                 

@@ -17,6 +17,7 @@ public let logger = Logger()
 struct VisionDocApp: App {
     
     private let immersiveSpaceIdentifier = "Immersive"
+    private let nervousModel = "ImmersiveNervous"
     @State private var viewModel = ViewModel()
     
     init(){
@@ -44,16 +45,22 @@ struct VisionDocApp: App {
                         viewModel: viewModel)
         }
         .windowStyle(.plain)
+        WindowGroup(id: "nervousModel") {
+            ContentViewTest(spaceId: immersiveSpaceIdentifier,
+                        viewModel: viewModel)
+        }
+        .windowStyle(.plain)
         
         WindowGroup(id: "skeletalModel"){
             SkeletalModel()
         } .windowStyle(.volumetric)
-            .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
+            .defaultSize(width: 10, height: 10, depth: 10, in: .meters)
         
         WindowGroup(id: "nervousModel"){
             NervousModel()
         } .windowStyle(.volumetric)
-            .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
+            .defaultSize(width: 10, height: 10, depth: 10, in: .meters)
+        
         WindowGroup(id: "muscularModel"){
             MuscularModel()
         } .windowStyle(.volumetric)
@@ -62,14 +69,19 @@ struct VisionDocApp: App {
         WindowGroup(id: "circulatoryModel"){
             CirculatoryModel()
         } .windowStyle(.volumetric)
-            .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
+            .defaultSize(width: 10, height: 10, depth: 10, in: .meters)
+        
         WindowGroup(id: "respiratoryModel"){
             RespiratoryModel()
         } .windowStyle(.volumetric)
-            .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
+            .defaultSize(width: 10, height: 10, depth: 10, in: .meters)
         
         ImmersiveSpace(id: immersiveSpaceIdentifier) {
             DioramaView(viewModel: viewModel)
+        }
+        .windowStyle(.automatic)
+        ImmersiveSpace(id: nervousModel) {
+            NervousDioramaView(viewModel: viewModel)
         }
         .windowStyle(.automatic)
     }

@@ -5,7 +5,8 @@
     "heartAnimated.usda",
     "lungsAnatomy.usda",
     "skeletonAnatomy.usda",
-    "muscleAnatomy.usda"
+    "muscleAnatomy.usda",
+    "NervousModel.usda"
   ],
   "recentIdentifiers" : {
     "2F96B865-4A09-4451-93D0-9912CA96E4D4" : [
@@ -261,6 +262,30 @@
           0,
           0.21718337,
           0.37617266,
+          1
+        ]
+      }
+    ],
+    "5EF4D8FB-D3D8-435E-8F49-DE93A4D89981" : [
+      {
+        "date" : 736402158.74616,
+        "title" : "Untitled",
+        "transform" : [
+          1,
+          0,
+          -0,
+          0,
+          -0,
+          0.8774897,
+          -0.47959542,
+          0,
+          0,
+          0.47959542,
+          0.8774897,
+          0,
+          0.12488012,
+          3.502783,
+          4.6279817,
           1
         ]
       }
@@ -1118,5 +1143,5 @@
       }
     ]
   },
-  "selectedSceneRelativePath" : "DioramaAssembled.usda"
+  "selectedSceneRelativePath" : "NervousModel.usda"
 }
